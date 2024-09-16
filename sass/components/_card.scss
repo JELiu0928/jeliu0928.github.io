@@ -1,0 +1,108 @@
+.card{
+    // 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
+    perspective: 150rem;
+    position: relative;
+    height: 52rem; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
+    width: 40rem;
+
+    &__side{   
+        // background-color: orangered;
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; //2D時不影響，但是3D可使用來隱藏背面
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
+        background-color: $color-white;
+    }
+    &__link{
+        &--1{
+            text-decoration: none;
+            color: $color-secondary-dark;
+        }
+        &--2{
+            text-decoration: none;
+            color: $color-tertiary-dark;
+        }
+        &--3{
+            text-decoration: none;
+            color: $color-quaternary-dark;
+        }
+    }
+    
+    &:hover &__side{
+        transform: scale(1.05) translateY(-.5rem);
+    }
+
+
+    &__picture{
+        
+        background-size: cover;
+        background-position: center;
+        height: 23rem;
+        // background-blend-mode定義該元素的背景圖片，以及背景色如何混合。
+        background-blend-mode: screen;
+        // box-shadow: 3px 5px 10px rgba($color-grey-dark,.85);
+        // clip-path: polygon(0 0,100% 0, 100% 85% ,0 100%);
+        &--1{
+            background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url(../img/Accessories_home.png);
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark),url(../img/happypet.png);
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom,$color-quaternary-light,$color-quaternary-dark),url(../img/snakegame.png);
+        }
+    }
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 18rem;
+        right: 1.5rem;
+        width: 75%;
+        
+        
+    }
+    // 這階層應該寫在外面，而不是寫在__heading裡面，因為他不是__heading的元素，算是BEM系統的一個新元素
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        // 用來定義當元素跨多行、多列或多頁時，元素的片段應如何呈現。
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1{
+            background-image:linear-gradient(to right bottom,rgba($color-secondary-light,.85),rgba($color-secondary-dark,.85));
+        }
+        &--2{
+            background-image:linear-gradient(to right bottom,rgba($color-tertiary-light,.85),rgba($color-tertiary-dark,.85));
+        }
+        &--3{
+            background-image:linear-gradient(to right bottom,rgba($color-quaternary-light,.85),rgba($color-quaternary-dark,.85));
+        }
+    }
+    &__details {
+        padding: 3rem;
+        ul {
+            list-style: none;
+            // width: 80%;
+            margin: 0 auto;
+            font-weight: 600;
+            li{
+                text-align: center;
+                font-size: 1.6rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            } 
+        }
+    }
+    
+}

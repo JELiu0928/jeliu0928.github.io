@@ -1,0 +1,128 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right bottom, #4444e9, #81a4fb);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Logo-text {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5rem;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0.2rem 0.2rem 2rem #888;
+  overflow: hidden;
+}
+
+.section-portfolio {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 52rem;
+  width: 40rem;
+}
+.card__side {
+  height: 52rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+.card__link--1 {
+  text-decoration: none;
+  color: #ff7730;
+}
+.card__link--2 {
+  text-decoration: none;
+  color: rgba(84, 11, 157, 0.9058823529);
+}
+.card__link--3 {
+  text-decoration: none;
+  color: rgb(166, 15, 123);
+}
+.card:hover .card__side {
+  transform: scale(1.05) translateY(-0.5rem);
+}
+.card__picture {
+  background-size: cover;
+  background-position: center;
+  height: 23rem;
+  background-blend-mode: screen;
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, #ffbb00, #ff7730), url(../img/Accessories_home.png);
+}
+.card__picture--2 {
+  background-image: linear-gradient(to right bottom, #ba7aff, rgba(84, 11, 157, 0.9058823529)), url(../img/happypet.png);
+}
+.card__picture--3 {
+  background-image: linear-gradient(to right bottom, #ffb3f5, rgb(166, 15, 123)), url(../img/snakegame.png);
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 18rem;
+  right: 1.5rem;
+  width: 75%;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 187, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(to right bottom, rgba(186, 122, 255, 0.85), rgba(84, 11, 157, 0.85));
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to right bottom, rgba(255, 179, 245, 0.85), rgba(166, 15, 123, 0.85));
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  margin: 0 auto;
+  font-weight: 600;
+}
+.card__details ul li {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/*# sourceMappingURL=style.css.map */

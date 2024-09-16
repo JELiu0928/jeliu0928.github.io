@@ -1,0 +1,13 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    // font-size: 10px;
+    // 用10px會好計算，但通常不會直接寫10px，而是用瀏覽器預設字體大小的16px*62.5% = 10px
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box; //在*使用繼承
+}
