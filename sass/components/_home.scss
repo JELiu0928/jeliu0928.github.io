@@ -1,15 +1,16 @@
 
 body{
     background-repeat: no-repeat;
-    background-image: linear-gradient(to right bottom,$color-primary-dark,$color-primary-light);
+    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
     height: 100vh;
     overflow: hidden;
 }
-.Logo-text{
+.name-text{
     text-align: center;
     text-transform: uppercase;
     margin: 5rem;
     font-size: 5rem;
+    font-weight: 400;
     color: #fff;
     text-shadow: .2rem .2rem 2rem #888;
     overflow: hidden;
@@ -18,4 +19,5 @@ body{
 .section-portfolio{
     display: flex;
     justify-content: space-around;
+    opacity: 0;
 }

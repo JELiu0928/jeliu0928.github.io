@@ -1,13 +1,13 @@
 .card{
     // 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
-    perspective: 150rem;
+    // perspective: 150rem;
     position: relative;
-    height: 52rem; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
-    width: 40rem;
+    height: 100%; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
+    width: 30%;
 
     &__side{   
         // background-color: orangered;
-        height: 52rem;
+        height: 65%;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -43,7 +43,8 @@
         
         background-size: cover;
         background-position: center;
-        height: 23rem;
+        background-repeat: no-repeat;
+        height: 20rem;
         // background-blend-mode定義該元素的背景圖片，以及背景色如何混合。
         background-blend-mode: screen;
         // box-shadow: 3px 5px 10px rgba($color-grey-dark,.85);
@@ -65,10 +66,12 @@
         text-align: right;
         color: $color-white;
         position: absolute;
-        top: 18rem;
+        top: 12rem;
         right: 1.5rem;
         width: 75%;
-        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
         
     }
     // 這階層應該寫在外面，而不是寫在__heading裡面，因為他不是__heading的元素，算是BEM系統的一個新元素
@@ -77,6 +80,14 @@
         // 用來定義當元素跨多行、多列或多頁時，元素的片段應如何呈現。
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
+        
+        &--subtitle{
+            padding: .7rem 1.3rem;
+            font-size: 1.5rem;
+            margin-top: -1.3rem;
+            margin-right: -1rem;
+        }
+        
         &--1{
             background-image:linear-gradient(to right bottom,rgba($color-secondary-light,.85),rgba($color-secondary-dark,.85));
         }
@@ -88,7 +99,8 @@
         }
     }
     &__details {
-        padding: 3rem;
+        padding: 1.2rem;
+        
         ul {
             list-style: none;
             // width: 80%;
@@ -97,7 +109,7 @@
             li{
                 text-align: center;
                 font-size: 1.6rem;
-                padding: 1rem;
+                padding: .55rem;
                 &:not(:last-child) {
                     border-bottom: 1px solid $color-grey-light-2;
                 }

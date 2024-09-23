@@ -1,7 +1,27 @@
-h1{
-    // color: blue;
-    // background-color: yellow;
-    div{
-        // background-color: green;
+.area{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    justify-content: center;
+    align-items: center;
+    &-inner{
+        background-color: #fff;
+        width: 80%;
+        height: 80%;
+        display: flex;
+    }
+    &-left{
+        background-color: $color-primary-dark-1;
+        flex:0 0 20%;
+    }
+    &-right{
+        // width: 30%;
+        // background-color: yellowgreen;
+        /* width: 70%; */
+        flex:1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -14,16 +14,17 @@ body {
 
 body {
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right bottom, #4444e9, #81a4fb);
+  background-image: linear-gradient(to right bottom, #dbbb9a, #b18d66);
   height: 100vh;
   overflow: hidden;
 }
 
-.Logo-text {
+.name-text {
   text-align: center;
   text-transform: uppercase;
   margin: 5rem;
   font-size: 5rem;
+  font-weight: 400;
   color: #fff;
   text-shadow: 0.2rem 0.2rem 2rem #888;
   overflow: hidden;
@@ -32,16 +33,42 @@ body {
 .section-portfolio {
   display: flex;
   justify-content: space-around;
+  opacity: 0;
+}
+
+.area {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #dbbb9a, #b18d66);
+  justify-content: center;
+  align-items: center;
+}
+.area-inner {
+  background-color: #fff;
+  width: 80%;
+  height: 80%;
+  display: flex;
+}
+.area-left {
+  background-color: #B79570;
+  flex: 0 0 20%;
+}
+.area-right {
+  /* width: 70%; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  perspective: 150rem;
   position: relative;
-  height: 52rem;
-  width: 40rem;
+  height: 100%;
+  width: 30%;
 }
 .card__side {
-  height: 52rem;
+  height: 65%;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -55,15 +82,15 @@ body {
 }
 .card__link--1 {
   text-decoration: none;
-  color: #ff7730;
+  color: #8dab98;
 }
 .card__link--2 {
   text-decoration: none;
-  color: rgba(84, 11, 157, 0.9058823529);
+  color: #999761;
 }
 .card__link--3 {
   text-decoration: none;
-  color: rgb(166, 15, 123);
+  color: #f29f9b;
 }
 .card:hover .card__side {
   transform: scale(1.05) translateY(-0.5rem);
@@ -71,17 +98,18 @@ body {
 .card__picture {
   background-size: cover;
   background-position: center;
-  height: 23rem;
+  background-repeat: no-repeat;
+  height: 20rem;
   background-blend-mode: screen;
 }
 .card__picture--1 {
-  background-image: linear-gradient(to right bottom, #ffbb00, #ff7730), url(../img/Accessories_home.png);
+  background-image: linear-gradient(to right bottom, #c9e0d1, #8dab98), url(../img/Accessories_home.png);
 }
 .card__picture--2 {
-  background-image: linear-gradient(to right bottom, #ba7aff, rgba(84, 11, 157, 0.9058823529)), url(../img/happypet.png);
+  background-image: linear-gradient(to right bottom, #adac98, #999761), url(../img/happypet.png);
 }
 .card__picture--3 {
-  background-image: linear-gradient(to right bottom, #ffb3f5, rgb(166, 15, 123)), url(../img/snakegame.png);
+  background-image: linear-gradient(to right bottom, #f1c0bd, #f29f9b), url(../img/snakegame.png);
 }
 .card__heading {
   font-size: 2.8rem;
@@ -90,26 +118,35 @@ body {
   text-align: right;
   color: #fff;
   position: absolute;
-  top: 18rem;
+  top: 12rem;
   right: 1.5rem;
   width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 .card__heading-span {
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+.card__heading-span--subtitle {
+  padding: 0.7rem 1.3rem;
+  font-size: 1.5rem;
+  margin-top: -1.3rem;
+  margin-right: -1rem;
+}
 .card__heading-span--1 {
-  background-image: linear-gradient(to right bottom, rgba(255, 187, 0, 0.85), rgba(255, 119, 48, 0.85));
+  background-image: linear-gradient(to right bottom, rgba(201, 224, 209, 0.85), rgba(141, 171, 152, 0.85));
 }
 .card__heading-span--2 {
-  background-image: linear-gradient(to right bottom, rgba(186, 122, 255, 0.85), rgba(84, 11, 157, 0.85));
+  background-image: linear-gradient(to right bottom, rgba(173, 172, 152, 0.85), rgba(153, 151, 97, 0.85));
 }
 .card__heading-span--3 {
-  background-image: linear-gradient(to right bottom, rgba(255, 179, 245, 0.85), rgba(166, 15, 123, 0.85));
+  background-image: linear-gradient(to right bottom, rgba(241, 192, 189, 0.85), rgba(242, 159, 155, 0.85));
 }
 .card__details {
-  padding: 3rem;
+  padding: 1.2rem;
 }
 .card__details ul {
   list-style: none;
@@ -119,7 +156,7 @@ body {
 .card__details ul li {
   text-align: center;
   font-size: 1.6rem;
-  padding: 1rem;
+  padding: 0.55rem;
 }
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
