@@ -1,13 +1,26 @@
 .card{
     // 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
-    // perspective: 150rem;
+    perspective: 150rem;
     position: relative;
-    height: 100%; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
-    width: 30%;
-
+    // height: 100%; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
+    height: 20rem;
+    width: 35rem;
+    cursor: pointer;
+    &-container{
+        // margin-top: 5rem;
+        // height: 100%;
+        // padding: 20rem;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2,35rem);
+        grid-template-rows: repeat(auto-fit,20rem);
+        gap: 4rem;
+        // height: 100%;
+       
+    }
     &__side{   
-        // background-color: orangered;
-        height: 65%;
+        background-color: orangered;
+        height: 20rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -18,25 +31,41 @@
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
         background-color: $color-white;
+        &--back{
+            transform: rotateY(180deg);
+            @include flexCenter;
+        }
     }
     &__link{
         &--1{
             text-decoration: none;
-            color: $color-secondary-dark;
+            color: $color-card-1-dark;
         }
         &--2{
             text-decoration: none;
-            color: $color-tertiary-dark;
+            color: $color-card-2-dark;
         }
         &--3{
             text-decoration: none;
-            color: $color-quaternary-dark;
+            color: $color-card-3-dark;
+        }
+        &--4{
+            text-decoration: none;
+            color: $color-card-4-dark;
         }
     }
     
-    &:hover &__side{
-        transform: scale(1.05) translateY(-.5rem);
+     
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
     }
+    &:hover &__side--back{
+        transform: rotateY(0deg); //hover後轉回0度
+    }
+    // &:hover &__side{
+    //     // transform: scale(1.05) translateY(-.5rem);
+    //     transform: rotateY(180deg);
+    // }
 
 
     &__picture{
@@ -50,13 +79,16 @@
         // box-shadow: 3px 5px 10px rgba($color-grey-dark,.85);
         // clip-path: polygon(0 0,100% 0, 100% 85% ,0 100%);
         &--1{
-            background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url(../img/Accessories_home.png);
+            background-image: linear-gradient(to right bottom,$color-card-1-light,$color-card-1-dark),url(../img/Accessories_home.png);
         }
         &--2{
-            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark),url(../img/happypet.png);
+            background-image: linear-gradient(to right bottom,$color-card-2-light,$color-card-2-dark),url(../img/happypet.png);
         }
         &--3{
-            background-image: linear-gradient(to right bottom,$color-quaternary-light,$color-quaternary-dark),url(../img/snakegame.png);
+            background-image: linear-gradient(to right bottom,$color-card-3-light,$color-card-3-dark),url(../img/snakegame.png);
+        }
+        &--4{
+            background-image: linear-gradient(to right bottom,$color-card-4-light,$color-card-4-dark),url(../img/vue3_accounting.png);
         }
     }
     &__heading{
@@ -72,15 +104,18 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: end;
+        transform: skewX(-25deg);
         
     }
     // 這階層應該寫在外面，而不是寫在__heading裡面，因為他不是__heading的元素，算是BEM系統的一個新元素
     &__heading-span{
         padding: 1rem 1.5rem;
+        margin-right: 2rem;
         // 用來定義當元素跨多行、多列或多頁時，元素的片段應如何呈現。
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-        
+        transform: skewX(25deg);
+        text-shadow: 1px 1px 4px #ffffff;
         &--subtitle{
             padding: .7rem 1.3rem;
             font-size: 1.5rem;
@@ -89,13 +124,16 @@
         }
         
         &--1{
-            background-image:linear-gradient(to right bottom,rgba($color-secondary-light,.85),rgba($color-secondary-dark,.85));
+            background-image:linear-gradient(to right bottom,rgba($color-card-1-light,.85),rgba($color-card-1-dark,.85));
         }
         &--2{
-            background-image:linear-gradient(to right bottom,rgba($color-tertiary-light,.85),rgba($color-tertiary-dark,.85));
+            background-image:linear-gradient(to right bottom,rgba($color-card-2-light,.85),rgba($color-card-2-dark,.85));
         }
         &--3{
-            background-image:linear-gradient(to right bottom,rgba($color-quaternary-light,.85),rgba($color-quaternary-dark,.85));
+            background-image:linear-gradient(to right bottom,rgba($color-card-3-light,.85),rgba($color-card-3-dark,.85));
+        }
+        &--4{
+            background-image:linear-gradient(to right bottom,rgba($color-card-4-light,.85),rgba($color-card-4-dark,.85));
         }
     }
     &__details {

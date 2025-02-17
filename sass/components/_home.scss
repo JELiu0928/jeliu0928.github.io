@@ -1,9 +1,23 @@
 
 body{
     background-repeat: no-repeat;
-    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
-    height: 100vh;
-    overflow: hidden;
+    // $color-primary-light,
+    background-image: linear-gradient(to right bottom,
+        #fce67a,
+        #fe97b3,
+        #97d6fe,
+        );
+    // background-image: linear-gradient(to right bottom,
+    //     #F3ECDA,
+    //     #cda881,
+
+    //     #a47b4f,
+    //     #795023,
+    //     #502f0c,
+    //     );
+        // $color-primary-dark,
+    // height: 100vh;
+    // overflow: hidden;
 }
 .name-text{
     text-align: center;

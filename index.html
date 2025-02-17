@@ -4,113 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- 引入字體 -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Monomakh&display=swap" rel="stylesheet"></head>
 <body>
-    <!-- <div class="">
-        <h1 class="name-text">Jing-En,Liu</h1>
-    </div> -->
     <div class="area">
         <div class="area-inner">
             <div class="area-left">
-                <blockquote>
-                    <p>Jing-En,Liu</p>
-                    <p>1995.09.28</p>
-                    <p>從食品業轉職</p>
-                </blockquote>
-                <blockquote>
-                    Skills
-                    <p>front-end</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>jQuery</li>
-                        <li>Bootstrap</li>
-                        <li>React</li>
-                        <li>PHP</li>
-                        <li>Laravel</li>
-                        <li>Laravel</li>
-                    </ul>
-                </blockquote>
+                <div class="info"> 
+                    <div class="info__image">
+                        <img src="./img/01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="info__content">
+                    <div class="zone">
+                        <div class="info__content-info ">
+                            <p lang="zh-TW">劉靜恩</p>
+                            <p >Jing-En, Liu</p>
+                        </div>
+                        <div class="info__content-contact">
+                            <a href="mailto:pig3703030@gmail.com" class="pb-1">
+                                <i class="fa-solid fa-envelope pr-1"></i> pig3703030@gmail.com
+                            </a>
+                            <a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA">
+                                <i class="fa-solid fa-address-card pr-1"></i> 104_PROFILE
+                            </a>
+                        </div>
+                    </div>
+                    <div >
+                        <!-- <div class="info__content-title" data-title="intro">簡介</div> -->
+                        <!-- <div class="info__content-intro" > -->
+                            <!-- <p><i class="icon fa-solid fa-cake-candles"></i>1995.09.28</p> -->
+                            <!-- <p><i class="icon fa-regular fa-lightbulb"></i>從食品業轉職</p> -->
+                             <!-- <p >我曾在食品產業擔任研發人員，因想拓展職業技能，於2024年參加資展國際的「創新應用全端網站開發工程師就業養成班」。 -->
+                                <!-- 隨後擔任PHP後端工程師，使用 Laravel 框架開發、jQuery 完成前後端的動態交互。希望將協作與溝通經驗結合新技術，迎接新的職業挑戰。</p> -->
+                        <!-- </div> -->
+
+                        <div class="info__content-title" data-title="project"><a href="#project">專案PROJECT</a></div>
+                        <div class="info__content-title" data-title="skill"><a href="#skill">技能SKILLS</a></div>
+                    </div>
+                </div>
+
             </div>
             <div class="area-right"> 
-                <div class="card">
-                    <div class="card__side ">
-                        <div class="card__picture card__picture--1">
-                            <!-- 前 --> &nbsp;
-                        </div>
-                        <h4 class="card__heading">
-                            <span class="card__heading-span card__heading-span--1">
-                                Accessories
-                            </span>
-                            <span class="card__heading-span card__heading-span--1 card__heading-span--subtitle">
-                                資展國際 | 個人小專
-                            </span>
-                        </h4>
-                        <div class="card__details">
-                            <ul>
-                                <li>HTML | CSS | Javascript</li>
-                                <!-- <li></li> -->
-                                <li><a class="card__link--1" href="https://jeliu0928.github.io/Accessories/" target="_blank">GitHub Pages</a></li>
-                                <li><a class="card__link--1" href="https://github.com/JELiu0928/Accessories" target="_blank">GitHub Code</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__side">
-                        <div class="card__picture card__picture--2">
-                                <div class="card__picture-inside">
-                                    <!-- 前 --> &nbsp;
+                <section class="project" id="project">
+                    <h2>PROJECT</h2>
+                    <div class=" card-container">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1"></div>
+                                <h4 class="card__heading">
+                                    <!-- <div style="transform: skew(25deg);   background-color: #000;"> -->
+                                        <span class="card__heading-span card__heading-span--1">
+                                            Accessories
+                                        </span>
+                                    <!-- </div> -->
+                                    <span lang="zh-TW" class="card__heading-span card__heading-span--1 card__heading-span--subtitle">
+                                        資展國際 | 個人小專
+                                    </span>
+                                </h4>                   
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__details">
+                                    <ul>
+                                        <li>HTML | CSS | Javascript</li>
+                                        <li><a class="card__link--1" href="https://jeliu0928.github.io/Accessories/" target="_blank">GitHub Pages</a></li>
+                                        <li><a class="card__link--1" href="https://github.com/JELiu0928/Accessories" target="_blank">GitHub Code</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        <h4 class="card__heading">
-                            <span class="card__heading-span card__heading-span--2">
-                                Happypet
-                            </span>
-                            <span class="card__heading-span card__heading-span--2 card__heading-span--subtitle">
-                                資展國際 | 團體大專
-                            </span>
-                        </h4>
-                        <div class="card__details">
-                            <ul>
-                                <li>HTML | CSS | JavaScript | jQuery</li>
-                                <li>Bootstrap | React(後台部分頁面)</li>
-                                <li>Laravel(PHP) | MySQL</li>
-                                <li><a class="card__link--2" href="https://youtu.be/EX4k_yXnSa0" target="_blank">Youtube</a></li>
-                                <li><a class="card__link--2" href="https://github.com/jiayua5661/happypet" target="_blank">GitHub Code</a></li>
-                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__side">
-                        <div class="card__picture card__picture--3">
-                                <div class="card__picture-inside">
-                                    <!-- 前 --> &nbsp;
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2"></div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">
+                                        Happypet
+                                    </span>
+                                    <span lang="zh-TW" class="card__heading-span card__heading-span--2 card__heading-span--subtitle">
+                                        資展國際 | 團體大專
+                                    </span>
+                                </h4>
+                            
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__details">
+                                    <ul>
+                                        <li>HTML | CSS | JavaScript | jQuery</li>
+                                        <li>Bootstrap | React(後台部分頁面)</li>
+                                        <li>Laravel(PHP) | MySQL</li>
+                                        <li><a class="card__link--2" href="https://youtu.be/EX4k_yXnSa0" target="_blank">Youtube</a></li>
+                                        <li><a class="card__link--2" href="https://github.com/jiayua5661/happypet" target="_blank">GitHub Code</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        <h4 class="card__heading">
-                            <span class="card__heading-span card__heading-span--3 ">
-                                snake game
-                            </span>
-                            <span class="card__heading-span card__heading-span--3 card__heading-span--subtitle">
-                                Javascript | 練習
-                            </span>
-                        </h4>
-                        <div class="card__details">
-                            <ul>
-                                <li>HTML | CSS | JavaScript</li>
-                                <li>僅能使用網頁版 | 搭配鍵盤</li>
-                                <li><a class="card__link--3" href="https://jeliu0928.github.io/snake_game_exercises/" target="_blank">GitHub Pages</a></li>
-                                <li><a class="card__link--3" href="https://github.com/JELiu0928/snake_game_exercises" target="_blank">GitHub Code</a></li>
+                        </div>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3"></div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3 ">
+                                        snake game
+                                    </span>
+                                    <span class="card__heading-span card__heading-span--3 card__heading-span--subtitle">
+                                        Javascript
+                                    </span>
+                                </h4>
+                            </div> 
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__details">
+                                    <ul>
+                                        <li>HTML | CSS | JavaScript</li>
+                                        <li lang="zh-TW">僅能使用網頁版 | 搭配鍵盤</li>
+                                        <li><a class="card__link--3" href="https://jeliu0928.github.io/snake_game_exercises/" target="_blank">GitHub Pages</a></li>
+                                        <li><a class="card__link--3" href="https://github.com/JELiu0928/snake_game_exercises" target="_blank">GitHub Code</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--4"></div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--4 ">
+                                        accounting
+                                    </span>
+                                    <span class="card__heading-span card__heading-span--4 card__heading-span--subtitle">
+                                        VUE3
+                                    </span>
+                                </h4>
+                            </div> 
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__details">
+                                    <ul>
+                                        <li>VUE3 | SCSS | TypeScript</li>
+                                        <li lang="zh-TW">可記帳，存於LocalStorage</li>
+                                        <li><a class="card__link--4" href="https://jeliu0928.github.io/vue3_accounting/" target="_blank">GitHub Pages</a></li>
+                                        <li><a class="card__link--4" href="https://github.com/JELiu0928/vue3_accounting" target="_blank">GitHub Code</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <section class="skill" id="skill">
+                    <h2>SKILLS</h2>
+                    <div class="skill-container">
+                        <div class="skill__common skill__front">
+                            <p class="skill__common-title">FRONT-END</p>
+                            <ul class="d-grid">
+                                <li><img src="./img/icon/html.png" alt="">HTML</li>
+                                <li><img src="./img/icon/css.png" alt="">CSS</li>
+                                <li><img src="./img/icon/js.png" alt="">JavaScript</li>
+                                <li><img src="./img/icon/jq.png" alt="">jQuery</li>
+                                <li><img src="./img/icon/bootstrap.png" alt="">Bootstrap5</li>
+                                <li><img src="./img/icon/react.png" alt="">React</li>
+                                <li><img src="./img/icon/vue.png" alt="">VUE3</li>
                             </ul>
                         </div>
+                        <div class="skill__common skill__back">
+                            <p class="skill__common-title">BACK-END</p>
+                            <ul class="d-grid">
+                                <li><img src="./img/icon/php.png" alt="">PHP</li>
+                                <li><img src="./img/icon/laravel.png" alt="">Laravel</li>
+                                <li><img src="./img/icon/mysql.png" alt="">MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="skill__common skill__back">
+                            <p class="skill__common-title">OTHERS</p>
+                            <ul class="d-grid">
+                                 <li><img src="./img/icon/git.png" alt="">Git</li>
+                            </ul>
+                        </div>
+                        
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </div>
@@ -121,5 +193,32 @@
    
     
     </section>
+    <script>
+        const titleBtn = document.querySelectorAll('.info__content-title')
+        const allSection = document.querySelectorAll('section')
+        console.log(titleBtn)
+        console.log(allSection)
+        // titleBtn.forEach(function(elem){
+        //     // console.log(e)
+        //     elem.addEventListener('click',function(){
+        //         // alert(111)
+        //         // console.log(this.dataset.title)
+        //         const showSection = Array.from(allSection).find((el)=>{
+        //             console.log(this.dataset.title === el.className)
+        //             return this.dataset.title === el.className
+        //         })
+        //         Array.from(allSection).forEach((el)=>{
+        //             // el.style.display = 'none'
+        //             showSection.style.opacity = 0
+
+        //         })
+        //         console.log('showSection',showSection)
+        //         showSection.style.opacity = 1
+        //         // showSection.style.display = 'block'
+                
+        //     })
+
+        // })
+    </script>
 </body>
 </html>

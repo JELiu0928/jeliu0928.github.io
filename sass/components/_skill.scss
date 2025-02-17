@@ -1,0 +1,61 @@
+.skill{
+    // // 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
+    // perspective: 150rem;
+    // position: relative;
+    // // height: 100%; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
+    // height: 20rem;
+    .d-grid{
+        // background-color: #bfa;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(6,10rem);
+        grid-template-rows: repeat(auto-fit,10rem);
+        gap: 2rem;
+        & > li{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+            color: #fff;
+            text-shadow: 1px 1px 5px #ffb5b5, 3px 3px 5px #d69090;
+
+            
+        }
+    }
+    // width: 100%;
+    &-container{
+        padding: 0 10rem 0rem 10rem;
+      
+       
+    }
+   
+    &__common{
+        cursor: default;
+        color: #fff;
+        text-shadow: 1px 1px 5px #ffb5b5, 3px 3px 5px #d69090;
+        margin-bottom: 1rem;
+        padding: 2rem;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 5px #dec2ff;
+        // background-color: aqua;
+        border-radius: 2rem;
+        &-title{
+            padding-bottom: 1.5rem;
+            font-size: 20px;
+            &:hover{
+
+            }
+        }
+    }
+    &__front{
+        // padding: 2rem;
+        // background-color: aqua;
+        // border-radius: 2rem;
+    }
+}
+
+img{
+    width: 8rem;
+    display: block;
+}
