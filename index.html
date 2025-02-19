@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- 引入字體 -->
@@ -16,7 +16,7 @@
             <div class="area-left">
                 <div class="info"> 
                     <div class="info__image">
-                        <img src="./img/01.jpg" alt="">
+                        <img src="./img/photo.jpg" alt="">
                     </div>
                 </div>
                 <div class="info__content">
@@ -29,7 +29,7 @@
                             <a href="mailto:pig3703030@gmail.com" class="pb-1">
                                 <i class="fa-solid fa-envelope pr-1"></i> pig3703030@gmail.com
                             </a>
-                            <a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA">
+                            <a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA" target="_blank">
                                 <i class="fa-solid fa-address-card pr-1"></i> 104_PROFILE
                             </a>
                         </div>
@@ -44,7 +44,7 @@
                         <!-- </div> -->
 
                         <div class="info__content-title" data-title="project"><a href="#project">專案PROJECT</a></div>
-                        <div class="info__content-title" data-title="skill"><a href="#skill">技能SKILLS</a></div>
+                        <div class="info__content-title" data-title="skill"><a href="#skills">技能SKILLS</a></div>
                     </div>
                 </div>
 
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card__side card__side--front">
+                             <div class="card__side card__side--front">
                                 <div class="card__picture card__picture--3"></div>
                                 <h4 class="card__heading">
                                     <span class="card__heading-span card__heading-span--3 ">
@@ -148,36 +148,59 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card ">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--5"></div>
+                                <h5 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--5 ">
+                                        taiwan travel
+                                    </span>
+                                    <span class="card__heading-span card__heading-span--5 card__heading-span--subtitle">
+                                        React
+                                    </span>
+                                </h5>
+                            </div> 
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__details">
+                                    <ul>
+                                        <li>React | SCSS</li>
+                                        <li lang="zh-TW">製作中...</li>
+                                        <!-- <li><a class="card__link--4" href="https://jeliu0928.github.io/vue3_accounting/" target="_blank">GitHub Pages</a></li> -->
+                                        <li><a class="card__link--5" href="https://github.com/JELiu0928/vue3_accounting" target="_blank">GitHub Code</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </section>
-                <section class="skill" id="skill">
+                <section class="skill" id="skills">
                     <h2>SKILLS</h2>
                     <div class="skill-container">
                         <div class="skill__common skill__front">
                             <p class="skill__common-title">FRONT-END</p>
                             <ul class="d-grid">
-                                <li><img src="./img/icon/html.png" alt="">HTML</li>
-                                <li><img src="./img/icon/css.png" alt="">CSS</li>
-                                <li><img src="./img/icon/js.png" alt="">JavaScript</li>
-                                <li><img src="./img/icon/jq.png" alt="">jQuery</li>
-                                <li><img src="./img/icon/bootstrap.png" alt="">Bootstrap5</li>
-                                <li><img src="./img/icon/react.png" alt="">React</li>
-                                <li><img src="./img/icon/vue.png" alt="">VUE3</li>
+                                <li class="skill-item">HTML<img src="./img/icon/html.png" alt=""></li>
+                                <li class="skill-item">CSS<img src="./img/icon/css.png" alt=""></li>
+                                <li class="skill-item">JavaScript<img src="./img/icon/js.png" alt=""></li>
+                                <li class="skill-item">jQuery<img src="./img/icon/jq.png" alt=""></li>
+                                <li class="skill-item">Bootstrap5<img src="./img/icon/bootstrap.png" alt=""></li>
+                                <li class="skill-item">React<img src="./img/icon/react.png" alt=""></li>
+                                <li class="skill-item">VUE3<img src="./img/icon/vue.png" alt=""></li>
                             </ul>
                         </div>
                         <div class="skill__common skill__back">
                             <p class="skill__common-title">BACK-END</p>
                             <ul class="d-grid">
-                                <li><img src="./img/icon/php.png" alt="">PHP</li>
-                                <li><img src="./img/icon/laravel.png" alt="">Laravel</li>
-                                <li><img src="./img/icon/mysql.png" alt="">MySQL</li>
+                                <li>PHP<img src="./img/icon/php.png" alt=""></li>
+                                <li>Laravel<img src="./img/icon/laravel.png" alt=""></li>
+                                <li>MySQL<img src="./img/icon/mysql.png" alt=""></li>
                             </ul>
                         </div>
                         <div class="skill__common skill__back">
                             <p class="skill__common-title">OTHERS</p>
                             <ul class="d-grid">
-                                 <li><img src="./img/icon/git.png" alt="">Git</li>
+                                <li id="makeCircle">Git<img src="./img/icon/git.png" alt=""></li>
                             </ul>
                         </div>
                         
@@ -186,6 +209,24 @@
             </div>
         </div>
     </div>
+    <svg id="hoverCircle" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+        <circle cx="100" cy="100" r="57.5" 
+            stroke="white" stroke-width="5" 
+            stroke-dasharray="400" stroke-dashoffset="400" stroke-linecap="round"
+            id="myCircle"  filter="drop-shadow(1px 1px 5px #ffb5b5)"
+        />
+        <animate 
+            id="circleAnimate"
+            href="#myCircle"
+            begin="indefinite"
+            attributeName="stroke-dashoffset"
+            from="400" to="0"
+            dur=".8s"
+            repeatCount="1"
+            />
+    </svg>
+    <!-- begin="makeCircle.mouseenter" -->
     <section class="section-portfolio">
         
         
@@ -219,6 +260,30 @@
         //     })
 
         // })
+
+        // const hoverCircle = document.getElementById("hoverCircle");
+        // const circleAnimate = document.getElementById("circleAnimate");
+
+        // document.querySelectorAll(".skill-item").forEach(item => {
+        //     item.addEventListener("mouseenter", function () {
+        //         const rect = this.getBoundingClientRect(); //元素相對於視口位置
+
+        //         // 讓 SVG 移動到 li 的位置
+        //         // top = <li>中心點: (<li> top(y) + 滾動距離 + <li>高度/2 ) - 100 
+        //         hoverCircle.style.top = rect.top + window.scrollY + rect.height / 2 -100  + "px";
+        //         hoverCircle.style.left = rect.left + rect.width / 2 -100 + "px";
+
+        //         hoverCircle.style.opacity = "1"; // 顯示圓圈
+
+        //         // 重新播放動畫
+        //         circleAnimate.beginElement();
+        //     });
+
+        //     item.addEventListener("mouseleave", function () {
+        //         // hoverCircle.style.opacity = "0"; // 離開時隱藏
+        //     });
+        // });
+
     </script>
 </body>
 </html>

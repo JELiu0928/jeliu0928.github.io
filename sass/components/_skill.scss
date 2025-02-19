@@ -11,6 +11,9 @@
         grid-template-columns: repeat(6,10rem);
         grid-template-rows: repeat(auto-fit,10rem);
         gap: 2rem;
+        &> * {
+            // aspect-ratio: 100/120; 
+        }
         & > li{
             display: flex;
             flex-direction: column;
@@ -20,7 +23,27 @@
             color: #fff;
             text-shadow: 1px 1px 5px #ffb5b5, 3px 3px 5px #d69090;
 
-            
+            position: relative;
+            &:hover img{
+                animation: floatItem 1.5s linear infinite;
+            }
+            &:hover::after{
+
+                animation: floatShadow 1.5s linear infinite;
+            }
+            &::after{
+               
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -1rem;
+                
+                // width: 4rem;
+                // border-radius: 10rem / 3rem;
+                width: 2rem;
+                height: .8rem;
+                border-radius: 6rem / 3rem;
+            }
         }
     }
     // width: 100%;
@@ -36,16 +59,18 @@
         text-shadow: 1px 1px 5px #ffb5b5, 3px 3px 5px #d69090;
         margin-bottom: 1rem;
         padding: 2rem;
-        border: 2px solid #fff;
-        box-shadow: 1px 1px 5px #dec2ff;
+        border: 2px solid $color-grey-light-1;
+        // box-shadow: 1px 1px 5px #d0d0d0;
         // background-color: aqua;
         border-radius: 2rem;
+        transition: box-shadow .3s;
+        &:hover{
+            box-shadow: 2px 2px 6px #d69090;
+        }
         &-title{
             padding-bottom: 1.5rem;
             font-size: 20px;
-            &:hover{
-
-            }
+           
         }
     }
     &__front{
@@ -59,3 +84,41 @@ img{
     width: 8rem;
     display: block;
 }
+@keyframes floatItem {
+    // 0%{
+    //     transform: translateY(0);
+    // }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes floatShadow {
+    0%{
+        background-color: #b8b4b4;
+
+    }
+    50%{
+      
+        // background-color: #b8b4b4;
+
+        width: 4rem;
+        height: 1rem;
+        border-radius: 10rem / 3rem;
+    }
+    100%{
+        // width: 4rem;
+        background-color: #b8b4b4;
+
+    }
+}
+// #hoverCircle {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     pointer-events: none; /* 讓滑鼠可以點到 li */
+//     opacity: 0; /* 預設隱藏 */
+//     transition: opacity 1s ease-in-out;
+// }
