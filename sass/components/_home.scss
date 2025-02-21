@@ -41,9 +41,40 @@ body{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        z-index: 9999;
+        z-index: 100;
     }
     &-text{
-        color: #fff;
+        color: #b9b9b9;
+        background-image: linear-gradient(to right, #fce67a, #fe97b3, #97d6fe,);
+        background-clip: text;
+        color: transparent;
+        background-size: 200% auto;  /* 讓漸層範圍變大 */
+        animation: colorChange 3s linear infinite; 
+    }
+    &-bar {
+        width: 12px;
+        height: 40px;
+        y: 30px;
+        animation: bounce 1.6s infinite ease-in-out;
     }
 }
+@keyframes colorChange{
+    0% ,100%{
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        y: 30px;
+        height: 20px;
+    }
+    50% {
+        y: 10px;
+        height: 60px;
+    }
+}
+
+

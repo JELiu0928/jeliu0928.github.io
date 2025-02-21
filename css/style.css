@@ -83,12 +83,41 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 9999;
+  z-index: 100;
 }
 .loading-text {
-  color: #fff;
+  color: #b9b9b9;
+  background-image: linear-gradient(to right, #fce67a, #fe97b3, #97d6fe);
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto; /* 讓漸層範圍變大 */
+  animation: colorChange 3s linear infinite;
+}
+.loading-bar {
+  width: 12px;
+  height: 40px;
+  y: 30px;
+  animation: bounce 1.6s infinite ease-in-out;
 }
 
+@keyframes colorChange {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    y: 30px;
+    height: 20px;
+  }
+  50% {
+    y: 10px;
+    height: 60px;
+  }
+}
 .area {
   max-width: 140rem;
   width: 140rem;
@@ -290,7 +319,7 @@ body {
 }
 .card__link--3 {
   text-decoration: none;
-  color: #738a0f;
+  color: #5e5757;
 }
 .card__link--4 {
   text-decoration: none;
@@ -298,7 +327,7 @@ body {
 }
 .card__link--5 {
   text-decoration: none;
-  color: #385b86;
+  color: #319d51;
 }
 .card:hover .card__side--front {
   animation: rotate_front 1.2s cubic-bezier(0.27, 0.74, 0.63, 0) forwards;
@@ -320,7 +349,7 @@ body {
   background-image: linear-gradient(to right bottom, #bbdfd3, #66a28e), url(../img/happypet.png);
 }
 .card__picture--3 {
-  background-image: linear-gradient(to right bottom, #c6dc65, #738a0f), url(../img/snake_game.png);
+  background-image: linear-gradient(to right bottom, #d4d4d4, #5e5757), url(../img/snake_game.png);
 }
 .card__picture--4 {
   background-image: linear-gradient(to right bottom, #8acbf3, #385b86), url(../img/vue3_accounting.png);
@@ -364,7 +393,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(187, 223, 211, 0.85), rgba(102, 162, 142, 0.85));
 }
 .card__heading-span--3 {
-  background-image: linear-gradient(to right bottom, rgba(198, 220, 101, 0.85), rgba(115, 138, 15, 0.85));
+  background-image: linear-gradient(to right bottom, rgba(212, 212, 212, 0.85), rgba(94, 87, 87, 0.85));
 }
 .card__heading-span--4 {
   background-image: linear-gradient(to right bottom, rgba(138, 203, 243, 0.85), rgba(56, 91, 134, 0.85));
