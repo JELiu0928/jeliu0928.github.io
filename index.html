@@ -25,39 +25,32 @@
         <div class="area-inner">
             <div class="area-left">
                 <div class="info"> 
-                    <div class="info__image">
-                        <img src="./img/photo.jpg" alt="">
+                    <div class="info-inner">
+                        <div class="info__image">
+                            <img src="./img/photo.jpg" alt="">
+                        </div>
+                        <div class="info__content">
+                            <div class="info__content-container">
+                                <div class="info__content-info ">
+                                    <p lang="zh-TW">劉靜恩</p>
+                                    <p >Jing-En, Liu</p>
+                                </div>
+                                <div class="info__content-contact">
+                                    <a href="mailto:pig3703030@gmail.com" class="pb-1">
+                                        <i class="fa-solid fa-envelope pr-1"></i> pig3703030@gmail.com
+                                    </a>
+                                    <a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA" target="_blank">
+                                        <i class="fa-solid fa-address-card pr-1"></i> 104_PROFILE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav">
+                            <div class="nav-title" data-title="project"><a href="#project">專案PROJECT</a></div>
+                            <div class="nav-title" data-title="skill"><a href="#skills">技能SKILLS</a></div>
+                        </div>
                     </div>
                 </div>
-                <div class="info__content">
-                    <div class="zone">
-                        <div class="info__content-info ">
-                            <p lang="zh-TW">劉靜恩</p>
-                            <p >Jing-En, Liu</p>
-                        </div>
-                        <div class="info__content-contact">
-                            <a href="mailto:pig3703030@gmail.com" class="pb-1">
-                                <i class="fa-solid fa-envelope pr-1"></i> pig3703030@gmail.com
-                            </a>
-                            <a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA" target="_blank">
-                                <i class="fa-solid fa-address-card pr-1"></i> 104_PROFILE
-                            </a>
-                        </div>
-                    </div>
-                    <div >
-                        <!-- <div class="info__content-title" data-title="intro">簡介</div> -->
-                        <!-- <div class="info__content-intro" > -->
-                            <!-- <p><i class="icon fa-solid fa-cake-candles"></i>1995.09.28</p> -->
-                            <!-- <p><i class="icon fa-regular fa-lightbulb"></i>從食品業轉職</p> -->
-                             <!-- <p >我曾在食品產業擔任研發人員，因想拓展職業技能，於2024年參加資展國際的「創新應用全端網站開發工程師就業養成班」。 -->
-                                <!-- 隨後擔任PHP後端工程師，使用 Laravel 框架開發、jQuery 完成前後端的動態交互。希望將協作與溝通經驗結合新技術，迎接新的職業挑戰。</p> -->
-                        <!-- </div> -->
-
-                        <div class="info__content-title" data-title="project"><a href="#project">專案PROJECT</a></div>
-                        <div class="info__content-title" data-title="skill"><a href="#skills">技能SKILLS</a></div>
-                    </div>
-                </div>
-
             </div>
             <div class="area-right"> 
                 <section class="project" id="project">
@@ -236,18 +229,26 @@
             repeatCount="1"
             />
     </svg>
-    <!-- begin="makeCircle.mouseenter" -->
-    <section class="section-portfolio">
-        
-        
-        
-   
+ 
+    <!-- <section class="section-portfolio">
     
-    </section>
+    </section> -->
     <script>
       
         window.addEventListener("load", function () {
             document.querySelector(".loading-overlay").style.display = "none";
+        });
+        document.querySelectorAll('.card').forEach(card => {
+            console.log(card)
+            card.addEventListener('mouseleave', function () {
+                console.log('leave')
+                card.classList.add('card-reverse');
+            });
+            card.addEventListener('mouseover', function () {
+                console.log('in')
+                card.classList.remove('card-reverse');
+            });
+            
         });
        
     

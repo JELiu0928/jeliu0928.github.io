@@ -20,6 +20,7 @@ $color-card-3-dark:#5e5757;
 // $color-card-3-dark:#738a0f;
 // $color-card-3-light:#fbd2d0;
 // $color-card-3-dark:#f29f9b;
+$linear-gradient-1:#fce67a, #fe97b3, #97d6fe;
 
 $color-card-4-light:#8acbf3;
 $color-card-4-dark:#385b86;
@@ -38,3 +39,5 @@ $color-white:#fff;
 $color-black:#000;
 // FONT
 $default-font-size: 1.6rem;
+
+$card-rotate-cubic-bezier: cubic-bezier(.27,.74,.63,0);
