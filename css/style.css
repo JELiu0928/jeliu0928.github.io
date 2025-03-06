@@ -136,6 +136,7 @@ body {
     width: 100%;
     margin-top: 0rem;
     box-shadow: 0 0.2rem 1rem hsl(0, 44%, 80%);
+    border-radius: 10px 10px 0 0;
   }
 }
 .area-left .info {
@@ -414,28 +415,21 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 20rem;
-  width: 35rem;
+  width: 100%;
+  min-height: 20rem;
   cursor: pointer;
-}
-@media (max-width: 1440px) {
-  .card {
-    width: 100%;
-  }
 }
 .card-container {
   display: grid;
   justify-content: center;
-  justify-items: center;
   grid-template-columns: repeat(auto-fill, 35rem);
-  grid-template-rows: repeat(auto-fill, 20rem);
   gap: 4rem;
-  transition: gap 0.5s;
+  margin-inline: 3rem;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .card-container {
     grid-template-columns: repeat(auto-fit, 30rem);
-    gap: 3rem;
+    gap: 2.5rem;
   }
 }
 .card__side {
@@ -524,7 +518,7 @@ body {
   flex-wrap: wrap;
   transform: skewX(-25deg);
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .card__heading {
     width: 90%;
   }
