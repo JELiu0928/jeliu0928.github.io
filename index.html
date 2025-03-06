@@ -1,258 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- 引入字體 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Monomakh&display=swap" rel="stylesheet"></head>
-<body>
-    <div class="loading-overlay">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="242" height="242">
-            <g>
-                <rect class="loading-bar" fill="#ff9ba1" x="19"></rect>
-                <rect class="loading-bar" fill="#ffcb96" x="44" style="animation-delay: -0.2s;"></rect>
-                <rect class="loading-bar" fill="#c7d5a7" x="69" style="animation-delay: -0.4s;"></rect>
-            </g>
-        </svg>
-        <div class="loading-text" lang=zh-TW>網站Loading中...請稍後</div>
-    </div>
-    <div class="area">
-        <div class="area-inner">
-            <div class="area-left">
-                <div class="info"> 
-                    <div class="info-inner">
-                        <div class="info__image">
-                            <img src="./img/photo.jpg" alt="">
-                        </div>
-                        <div class="info__content">
-                            <div class="info__content-container">
-                                <div class="info__content-info ">
-                                    <p lang="zh-TW">劉靜恩</p>
-                                    <p >Jing-En, Liu</p>
-                                </div>
-                                <div class="info__content-contact">
-                                    <a href="mailto:pig3703030@gmail.com" class="pb-1">
-                                        <i class="fa-solid fa-envelope pr-1"></i> pig3703030@gmail.com
-                                    </a>
-                                    <a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA" target="_blank">
-                                        <i class="fa-solid fa-address-card pr-1"></i> 104_PROFILE
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav">
-                            <div class="nav-title" data-title="project"><a href="#project">專案PROJECT</a></div>
-                            <div class="nav-title" data-title="skill"><a href="#skills">技能SKILLS</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="area-right"> 
-                <section class="project" id="project">
-                    <h2>PROJECT</h2>
-                    <div class=" card-container">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--1"></div>
-                                <h4 class="card__heading">
-                                    <!-- <div style="transform: skew(25deg);   background-color: #000;"> -->
-                                        <span class="card__heading-span card__heading-span--1">
-                                            Accessories
-                                        </span>
-                                    <!-- </div> -->
-                                    <span lang="zh-TW" class="card__heading-span card__heading-span--1 card__heading-span--subtitle">
-                                        資展國際 | 個人小專
-                                    </span>
-                                </h4>                   
-                            </div>
-                            <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__details">
-                                    <ul>
-                                        <li>HTML | CSS | Javascript</li>
-                                        <li><a class="card__link--1" href="https://jeliu0928.github.io/Accessories/" target="_blank">GitHub Pages</a></li>
-                                        <li><a class="card__link--1" href="https://github.com/JELiu0928/Accessories" target="_blank">GitHub Code</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--2"></div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--2">
-                                        Happypet
-                                    </span>
-                                    <span lang="zh-TW" class="card__heading-span card__heading-span--2 card__heading-span--subtitle">
-                                        資展國際 | 團體大專
-                                    </span>
-                                </h4>
-                            
-                            </div>
-                            <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__details">
-                                    <ul>
-                                        <li>HTML | CSS | JavaScript | jQuery</li>
-                                        <li>Bootstrap | React(後台部分頁面)</li>
-                                        <li>Laravel(PHP) | MySQL</li>
-                                        <li><a class="card__link--2" href="https://youtu.be/EX4k_yXnSa0" target="_blank">Youtube</a></li>
-                                        <li><a class="card__link--2" href="https://github.com/jiayua5661/happypet" target="_blank">GitHub Code</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                             <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--3"></div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--3 ">
-                                        snake game
-                                    </span>
-                                    <span class="card__heading-span card__heading-span--3 card__heading-span--subtitle">
-                                        Javascript
-                                    </span>
-                                </h4>
-                            </div> 
-                            <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__details">
-                                    <ul>
-                                        <li>HTML | CSS | JavaScript</li>
-                                        <li lang="zh-TW">僅能使用網頁版 | 搭配鍵盤</li>
-                                        <li><a class="card__link--3" href="https://jeliu0928.github.io/snake_game_exercises/" target="_blank">GitHub Pages</a></li>
-                                        <li><a class="card__link--3" href="https://github.com/JELiu0928/snake_game_exercises" target="_blank">GitHub Code</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--4"></div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--4 ">
-                                        accounting
-                                    </span>
-                                    <span class="card__heading-span card__heading-span--4 card__heading-span--subtitle">
-                                        VUE3
-                                    </span>
-                                </h4>
-                            </div> 
-                            <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__details">
-                                    <ul>
-                                        <li>VUE3 | SCSS | TypeScript</li>
-                                        <li lang="zh-TW">可記帳，存於LocalStorage</li>
-                                        <li><a class="card__link--4" href="https://jeliu0928.github.io/vue3_accounting/" target="_blank">GitHub Pages</a></li>
-                                        <li><a class="card__link--4" href="https://github.com/JELiu0928/vue3_accounting" target="_blank">GitHub Code</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card ">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--5"></div>
-                                <h5 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--5 ">
-                                        taiwan travel
-                                    </span>
-                                    <span class="card__heading-span card__heading-span--5 card__heading-span--subtitle">
-                                        React
-                                    </span>
-                                </h5>
-                            </div> 
-                            <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__details">
-                                    <ul>
-                                        <li>React | SCSS</li>
-                                        <li lang="zh-TW">製作中...</li>
-                                        <!-- <li><a class="card__link--4" href="https://jeliu0928.github.io/vue3_accounting/" target="_blank">GitHub Pages</a></li> -->
-                                        <li><a class="card__link--5" href="https://github.com/JELiu0928/taiwan_travel" target="_blank">GitHub Code</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </section>
-                <section class="skill" id="skills">
-                    <h2>SKILLS</h2>
-                    <div class="skill-container">
-                        <div class="skill__common skill__front">
-                            <p class="skill__common-title">FRONT-END</p>
-                            <ul class="d-grid">
-                                <li class="skill-item">HTML<img src="./img/icon/html.png" alt=""></li>
-                                <li class="skill-item">CSS<img src="./img/icon/css.png" alt=""></li>
-                                <li class="skill-item">JavaScript<img src="./img/icon/js.png" alt=""></li>
-                                <li class="skill-item">jQuery<img src="./img/icon/jq.png" alt=""></li>
-                                <li class="skill-item">Bootstrap5<img src="./img/icon/bootstrap.png" alt=""></li>
-                                <li class="skill-item">React<img src="./img/icon/react.png" alt=""></li>
-                                <li class="skill-item">VUE3<img src="./img/icon/vue.png" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="skill__common skill__back">
-                            <p class="skill__common-title">BACK-END</p>
-                            <ul class="d-grid">
-                                <li>PHP<img src="./img/icon/php.png" alt=""></li>
-                                <li>Laravel<img src="./img/icon/laravel.png" alt=""></li>
-                                <li>MySQL<img src="./img/icon/mysql.png" alt=""></li>
-                            </ul>
-                        </div>
-                        <div class="skill__common skill__back">
-                            <p class="skill__common-title">OTHERS</p>
-                            <ul class="d-grid">
-                                <li id="makeCircle">Git<img src="./img/icon/git.png" alt=""></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <svg id="hoverCircle" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        
-        <circle cx="100" cy="100" r="57.5" 
-            stroke="white" stroke-width="5" 
-            stroke-dasharray="400" stroke-dashoffset="400" stroke-linecap="round"
-            id="myCircle"  filter="drop-shadow(1px 1px 5px #ffb5b5)"
-        />
-        <animate 
-            id="circleAnimate"
-            href="#myCircle"
-            begin="indefinite"
-            attributeName="stroke-dashoffset"
-            from="400" to="0"
-            dur=".8s"
-            repeatCount="1"
-            />
-    </svg>
- 
-    <!-- <section class="section-portfolio">
-    
-    </section> -->
-    <script>
-      
-        window.addEventListener("load", function () {
-            document.querySelector(".loading-overlay").style.display = "none";
-        });
-        document.querySelectorAll('.card').forEach(card => {
-            console.log(card)
-            card.addEventListener('mouseleave', function () {
-                console.log('leave')
-                card.classList.add('card-reverse');
-            });
-            card.addEventListener('mouseover', function () {
-                console.log('in')
-                card.classList.remove('card-reverse');
-            });
-            
-        });
-       
-    
-
-    </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio Website</title>
+		<link rel="stylesheet" href="./asset/fontawesome/css/all.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<!-- 引入字體 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Monomakh&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="loading-overlay">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="242" height="242">
+				<g>
+					<rect class="loading-bar" fill="#ff9ba1" x="19"></rect>
+					<rect class="loading-bar" fill="#ffcb96" x="44" style="animation-delay: -0.2s"></rect>
+					<rect class="loading-bar" fill="#c7d5a7" x="69" style="animation-delay: -0.4s"></rect>
+				</g>
+			</svg>
+			<div class="loading-text" lang="zh-TW">網站Loading中...請稍後</div>
+		</div>
+		<div class="area">
+			<div class="area-inner">
+				<div class="area-left">
+					<div class="info">
+						<div class="info-inner">
+							<div class="info__image">
+								<img src="./img/photo.jpg" alt="" />
+							</div>
+							<div class="info__content">
+								<div class="info__content-container">
+									<div class="info__content-info">
+										<p lang="zh-TW">劉靜恩</p>
+										<p>Jing-En, Liu</p>
+									</div>
+									<div class="info__content-contact">
+										<a href="mailto:pig3703030@gmail.com" class="pb-1"> <i class="fa-solid fa-envelope pr-1"></i> pig3703030@gmail.com </a>
+										<a href="https://pda.104.com.tw/profile/share/3DDAv1xFmKg7yae1NnBmyctyDIJdAkRA" target="_blank"> <i class="fa-solid fa-address-card pr-1"></i> 104_PROFILE </a>
+									</div>
+								</div>
+							</div>
+							<div class="nav">
+								<div class="nav-title" data-title="project"><a href="#project">專案PROJECT</a></div>
+								<div class="nav-title" data-title="skill"><a href="#skills">技能SKILLS</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="area-right">
+					<section class="project" id="project">
+						<h2>PROJECT</h2>
+						<p id="test"></p>
+						<div class="card-container">
+							<div class="card">
+								<div class="card__side card__side--front">
+									<div class="card__picture card__picture--1"></div>
+									<h4 class="card__heading">
+										<span class="card__heading-span card__heading-span--1"> Accessories </span>
+										<span lang="zh-TW" class="card__heading-span card__heading-span--1 card__heading-span--subtitle"> 資展國際 | 個人小專 </span>
+									</h4>
+								</div>
+								<div class="card__side card__side--back card__side--back-1">
+									<div class="card__details">
+										<ul>
+											<li>HTML | CSS | Javascript</li>
+											<li><a class="card__link--1" href="https://jeliu0928.github.io/Accessories/" target="_blank">GitHub Pages</a></li>
+											<li><a class="card__link--1" href="https://github.com/JELiu0928/Accessories" target="_blank">GitHub Code</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card__side card__side--front">
+									<div class="card__picture card__picture--2"></div>
+									<h4 class="card__heading">
+										<span class="card__heading-span card__heading-span--2"> Happypet </span>
+										<span lang="zh-TW" class="card__heading-span card__heading-span--2 card__heading-span--subtitle"> 資展國際 | 團體大專 </span>
+									</h4>
+								</div>
+								<div class="card__side card__side--back card__side--back-1">
+									<div class="card__details">
+										<ul>
+											<li>HTML | CSS | JavaScript | jQuery</li>
+											<li>Bootstrap | React(後台部分頁面)</li>
+											<li>Laravel(PHP) | MySQL</li>
+											<li><a class="card__link--2" href="https://youtu.be/EX4k_yXnSa0" target="_blank">Youtube</a></li>
+											<li><a class="card__link--2" href="https://github.com/jiayua5661/happypet" target="_blank">GitHub Code</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card__side card__side--front">
+									<div class="card__picture card__picture--3"></div>
+									<h4 class="card__heading">
+										<span class="card__heading-span card__heading-span--3"> snake game </span>
+										<span class="card__heading-span card__heading-span--3 card__heading-span--subtitle"> Javascript </span>
+									</h4>
+								</div>
+								<div class="card__side card__side--back card__side--back-1">
+									<div class="card__details">
+										<ul>
+											<li>HTML | CSS | JavaScript</li>
+											<li lang="zh-TW">僅能使用網頁版 | 搭配鍵盤</li>
+											<li><a class="card__link--3" href="https://jeliu0928.github.io/snake_game_exercises/" target="_blank">GitHub Pages</a></li>
+											<li><a class="card__link--3" href="https://github.com/JELiu0928/snake_game_exercises" target="_blank">GitHub Code</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card__side card__side--front">
+									<div class="card__picture card__picture--4"></div>
+									<h4 class="card__heading">
+										<span class="card__heading-span card__heading-span--4"> accounting </span>
+										<span class="card__heading-span card__heading-span--4 card__heading-span--subtitle"> VUE3 </span>
+									</h4>
+								</div>
+								<div class="card__side card__side--back card__side--back-1">
+									<div class="card__details">
+										<ul>
+											<li>VUE3 | SCSS | TypeScript</li>
+											<li lang="zh-TW">可記帳，存於LocalStorage</li>
+											<li><a class="card__link--4" href="https://jeliu0928.github.io/vue3_accounting/" target="_blank">GitHub Pages</a></li>
+											<li><a class="card__link--4" href="https://github.com/JELiu0928/vue3_accounting" target="_blank">GitHub Code</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card__side card__side--front">
+									<div class="card__picture card__picture--5"></div>
+									<h5 class="card__heading">
+										<span class="card__heading-span card__heading-span--5"> taiwan travel </span>
+										<span class="card__heading-span card__heading-span--5 card__heading-span--subtitle"> React </span>
+									</h5>
+								</div>
+								<div class="card__side card__side--back card__side--back-1">
+									<div class="card__details">
+										<ul>
+											<li>React | SCSS</li>
+											<li lang="zh-TW">製作中...</li>
+											<!-- <li><a class="card__link--4" href="https://jeliu0928.github.io/vue3_accounting/" target="_blank">GitHub Pages</a></li> -->
+											<li><a class="card__link--5" href="https://github.com/JELiu0928/taiwan_travel" target="_blank">GitHub Code</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="skill" id="skills">
+						<h2>SKILLS</h2>
+						<div class="skill-container">
+							<div class="skill__common skill__front">
+								<p class="skill__common-title">FRONT-END</p>
+								<ul class="d-grid">
+									<li class="skill-item">HTML<img src="./img/icon/html.png" alt="" /></li>
+									<li class="skill-item">CSS<img src="./img/icon/css.png" alt="" /></li>
+									<li class="skill-item">JavaScript<img src="./img/icon/js.png" alt="" /></li>
+									<li class="skill-item">jQuery<img src="./img/icon/jq.png" alt="" /></li>
+									<li class="skill-item">Bootstrap5<img src="./img/icon/bootstrap.png" alt="" /></li>
+									<li class="skill-item">React<img src="./img/icon/react.png" alt="" /></li>
+									<li class="skill-item">VUE3<img src="./img/icon/vue.png" alt="" /></li>
+								</ul>
+							</div>
+							<div class="skill__common skill__back">
+								<p class="skill__common-title">BACK-END</p>
+								<ul class="d-grid">
+									<li>PHP<img src="./img/icon/php.png" alt="" /></li>
+									<li>Laravel<img src="./img/icon/laravel.png" alt="" /></li>
+									<li>MySQL<img src="./img/icon/mysql.png" alt="" /></li>
+								</ul>
+							</div>
+							<div class="skill__common skill__back">
+								<p class="skill__common-title">OTHERS</p>
+								<ul class="d-grid">
+									<li id="makeCircle">Git<img src="./img/icon/git.png" alt="" /></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<svg id="hoverCircle" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="100" cy="100" r="57.5" stroke="white" stroke-width="5" stroke-dasharray="400" stroke-dashoffset="400" stroke-linecap="round" id="myCircle" filter="drop-shadow(1px 1px 5px #ffb5b5)" />
+			<animate id="circleAnimate" href="#myCircle" begin="indefinite" attributeName="stroke-dashoffset" from="400" to="0" dur=".8s" repeatCount="1" />
+		</svg>
+		<script>
+			window.addEventListener('load', function () {
+				document.querySelector('.loading-overlay').style.display = 'none';
+			});
+			document.querySelectorAll('.card').forEach((card) => {
+				console.log(card);
+				card.addEventListener('mouseleave', function () {
+					console.log('leave');
+					card.classList.add('card-reverse');
+				});
+				card.addEventListener('mouseover', function () {
+					console.log('in');
+					card.classList.remove('card-reverse');
+				});
+			});
+		</script>
+	</body>
 </html>

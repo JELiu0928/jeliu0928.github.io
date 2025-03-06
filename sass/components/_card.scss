@@ -1,232 +1,205 @@
-.card{
-    // 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
-    perspective: 150rem;
-    position: relative;
-    // height: 100%; //子元素side用了定位後高度塌陷，故將這裡添加和side一樣的高度
-    height: 20rem;
-    width: 35rem;
-    // aspect-ratio: 7 / 4;
-    // width: 100%;
-    // height: 100%;
+.card {
+	// 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
+	perspective: 150rem;
+	position: relative;
+	height: 20rem;
+	width: 35rem;
+	cursor: pointer;
+	@media (max-width: 1440px) {
+		width: 100%;
+	}
 
-    cursor: pointer;
-    @media (max-width:1440px) {
-        width: 30rem;
-    }
-    @media (max-width:768px) {
-        // width: 40rem;
-        // aspect-ratio: 1 / 1;
-    }
-    &-container{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(auto-fill,35rem);
-        // grid-template-columns: repeat(auto-fit,1fr);
-        grid-template-rows: repeat(auto-fill,20rem);
-        gap: 4rem;
-        transition: gap 1s;
-        justify-items: center;
+	&-container {
+		display: grid;
+		justify-content: center;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fill, 35rem);
+		grid-template-rows: repeat(auto-fill, 20rem);
+		gap: 4rem;
+		transition: gap 0.5s;
 
+		@media (max-width: 1440px) {
+			grid-template-columns: repeat(auto-fit, 30rem);
+			gap: 3rem;
+		}
+	}
+	&__side {
+		height: 20rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden; //2D時不影響，但是3D可使用來隱藏背面
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+		background-color: $color-white;
+		transition: all 0.8s ease;
+		&--back {
+			transform: rotateY(180deg);
+			@include flexCenter;
+		}
+	}
+	&__link {
+		text-decoration: none;
 
-        @media (max-width:1440px) {
-            grid-template-columns: repeat(auto-fit,30rem);
-            gap: 3rem;
-        }
-        @media (max-width:768px) {
-            // grid-template-columns: repeat(auto-fit,20rem);
-            // gap: 3rem;
-            width: 100%;
-            height: 100%;
-        }
-    }
-    &__side{   
-        background-color: orangered;
-        height: 20rem;
-        transition: all .8s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        backface-visibility: hidden; //2D時不影響，但是3D可使用來隱藏背面
-        border-radius: 5px;
-        overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
-        background-color: $color-white;
-        &--back{
-            transform: rotateY(180deg);
-            @include flexCenter;
-            animation: none;
+		&--1 {
+			color: $color-card-1-dark;
+		}
+		&--2 {
+			color: $color-card-2-dark;
+		}
+		&--3 {
+			color: $color-card-3-dark;
+		}
+		&--4 {
+			color: $color-card-4-dark;
+		}
+		&--5 {
+			color: $color-card-5-dark;
+		}
+	}
 
-        }
-        &--front{
-            animation: none;
-        }
-    }
-    &__link{
-        &--1{
-            text-decoration: none;
-            color: $color-card-1-dark;
-        }
-        &--2{
-            text-decoration: none;
-            color: $color-card-2-dark;
-        }
-        &--3{
-            text-decoration: none;
-            color: $color-card-3-dark;
-        }
-        &--4{
-            text-decoration: none;
-            color: $color-card-4-dark;
-        }
-        &--5{
-            text-decoration: none;
-            color: $color-card-5-dark;
-        }
-    }
-    
-     
-    &:hover &__side--front{
-        // transform: rotateY(-180deg);
-        animation: rotate_front 1.2s $card-rotate-cubic-bezier forwards;
-    }
-    .card-reverse &__side--front{
-        // transform: rotateY(-180deg);
-        animation: rotate_front_reverse 1.2s $card-rotate-cubic-bezier forwards;
-    }
-    &:hover &__side--back{
-        // transform: rotateY(0deg); 
-        animation: rotate_back 1.2s $card-rotate-cubic-bezier forwards;
-    }
-    .card-reverse &__side--back{
-        // transform: rotateY(0deg); 
-        animation: rotate_back_reverse 1.2s $card-rotate-cubic-bezier forwards;
-    }
-    &__picture{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        // height: 20rem;
-        height: 100%;
-        // background-blend-mode定義該元素的背景圖片，以及背景色如何混合。
-        background-blend-mode: screen;
-        &--1{
-            background-image: linear-gradient(to right bottom,$color-card-1-light,$color-card-1-dark),url(../img/Accessories_home.png);
-        }
-        &--2{
-            background-image: linear-gradient(to right bottom,$color-card-2-light,$color-card-2-dark),url(../img/happypet.png);
-        }
-        &--3{
-            background-image: linear-gradient(to right bottom,$color-card-3-light,$color-card-3-dark),url(../img/snake_game.png);
-        }
-        &--4{
-            background-image: linear-gradient(to right bottom,$color-card-4-light,$color-card-4-dark),url(../img/vue3_accounting.png);
-        }
-        &--5{
-            background-image: linear-gradient(to right bottom,$color-card-5-light,$color-card-5-dark),url(../img/taiwan_travel.png);
-        }
-    }
-    &__heading{
-        font-size: 2.6rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: right;
-        color: $color-white;
-        position: absolute;
-        top: 12rem;
-        right: 1.6rem;
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        transform: skewX(-25deg);
-        @media (max-width:1440px) {
-            width: 90%;
-            
-        }
-        
-    }
-    // 這階層應該寫在外面，而不是寫在__heading裡面，因為他不是__heading的元素，算是BEM系統的一個新元素
-    &__heading-span{
-        padding: 1rem 1.5rem;
-        margin-right: 2rem;
-        // 用來定義當元素跨多行、多列或多頁時，元素的片段應如何呈現。
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        transform: skewX(25deg);
-        text-shadow: 1px 1px 4px #ffffff;
-        &--subtitle{
-            padding: .7rem 1.3rem;
-            font-size: 1.4rem;
-            margin-top: -1.3rem;
-            margin-right: -1rem;
-        }
-        
-        &--1{
-            background-image:linear-gradient(to right bottom,rgba($color-card-1-light,.85),rgba($color-card-1-dark,.85));
-        }
-        &--2{
-            background-image:linear-gradient(to right bottom,rgba($color-card-2-light,.85),rgba($color-card-2-dark,.85));
-        }
-        &--3{
-            background-image:linear-gradient(to right bottom,rgba($color-card-3-light,.85),rgba($color-card-3-dark,.85));
-        }
-        &--4{
-            background-image:linear-gradient(to right bottom,rgba($color-card-4-light,.85),rgba($color-card-4-dark,.85));
-        }
-        &--5{
-            background-image:linear-gradient(to right bottom,rgba($color-card-5-light,.85),rgba($color-card-5-dark,.85));
-        }
-    }
-    &__details {
-        padding: 1.2rem;
-        
-        ul {
-            list-style: none;
-            // width: 80%;
-            margin: 0 auto;
-            font-weight: 600;
-            li{
-                text-align: center;
-                font-size: 1.6rem;
-                padding: .55rem;
-                &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-light-2;
-                }
-            } 
-        }
-    }
-    
+	// @media (hover: hover) {
+	&:hover &__side--front {
+		// transform: rotateY(-180deg);
+		animation: rotate_front 1.2s $card-rotate-cubic-bezier forwards;
+	}
+	&:hover &__side--back {
+		// transform: rotateY(0deg);
+		animation: rotate_back 1.2s $card-rotate-cubic-bezier forwards;
+	}
+	// }
+
+	.card-reverse &__side--front {
+		// transform: rotateY(-180deg);
+		animation: rotate_front_reverse 1.2s $card-rotate-cubic-bezier forwards;
+	}
+
+	.card-reverse &__side--back {
+		// transform: rotateY(0deg);
+		animation: rotate_back_reverse 1.2s $card-rotate-cubic-bezier forwards;
+	}
+	&__picture {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100%;
+		// background-blend-mode定義該元素的背景圖片，以及背景色如何混合。
+		background-blend-mode: screen;
+		&--1 {
+			background-image: linear-gradient(to right bottom, $color-card-1-light, $color-card-1-dark), url(../img/Accessories_home.png);
+		}
+		&--2 {
+			background-image: linear-gradient(to right bottom, $color-card-2-light, $color-card-2-dark), url(../img/happypet.png);
+		}
+		&--3 {
+			background-image: linear-gradient(to right bottom, $color-card-3-light, $color-card-3-dark), url(../img/snake_game.png);
+		}
+		&--4 {
+			background-image: linear-gradient(to right bottom, $color-card-4-light, $color-card-4-dark), url(../img/vue3_accounting.png);
+		}
+		&--5 {
+			background-image: linear-gradient(to right bottom, $color-card-5-light, $color-card-5-dark), url(../img/taiwan_travel.png);
+		}
+	}
+	&__heading {
+		width: 80%;
+		font-size: 2.6rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: right;
+		color: $color-white;
+
+		position: absolute;
+		top: 12rem;
+		right: 1.6rem;
+		display: flex;
+		justify-content: end;
+		flex-wrap: wrap;
+		transform: skewX(-25deg);
+		@media (max-width: 1440px) {
+			width: 90%;
+		}
+	}
+	// 這階層應該寫在外面，而不是寫在__heading裡面，因為他不是__heading的元素，算是BEM系統的一個新元素
+	&__heading-span {
+		padding: 1rem 1.5rem;
+		margin-right: 2rem;
+		// 用來定義當元素跨多行、多列或多頁時，元素的片段應如何呈現。
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+		transform: skewX(25deg);
+		text-shadow: 1px 1px 4px #ffffff;
+		&--subtitle {
+			padding: 0.7rem 1.3rem;
+			font-size: 1.4rem;
+			margin-top: -1.3rem;
+			margin-right: -1rem;
+		}
+
+		&--1 {
+			background-image: linear-gradient(to right bottom, rgba($color-card-1-light, 0.85), rgba($color-card-1-dark, 0.85));
+		}
+		&--2 {
+			background-image: linear-gradient(to right bottom, rgba($color-card-2-light, 0.85), rgba($color-card-2-dark, 0.85));
+		}
+		&--3 {
+			background-image: linear-gradient(to right bottom, rgba($color-card-3-light, 0.85), rgba($color-card-3-dark, 0.85));
+		}
+		&--4 {
+			background-image: linear-gradient(to right bottom, rgba($color-card-4-light, 0.85), rgba($color-card-4-dark, 0.85));
+		}
+		&--5 {
+			background-image: linear-gradient(to right bottom, rgba($color-card-5-light, 0.85), rgba($color-card-5-dark, 0.85));
+		}
+	}
+	&__details {
+		padding: 1.2rem;
+
+		ul {
+			list-style: none;
+			margin: 0 auto;
+			font-weight: 600;
+			li {
+				text-align: center;
+				padding: 0.55rem;
+				&:not(:last-child) {
+					border-bottom: 1px solid $color-grey-light-2;
+				}
+			}
+		}
+	}
 }
 @keyframes rotate_front {
-    0% {
-        transform: rotateY(0deg);
-    }
-    100% {
-        transform: rotateY(540deg); 
-    }
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(540deg);
+	}
 }
 @keyframes rotate_front_reverse {
-    0% {
-        transform: rotateY(540deg);
-    }
-    100% {
-        transform: rotateY(0deg); 
-    }
+	0% {
+		transform: rotateY(540deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
 }
 @keyframes rotate_back {
-    0%{
-        transform: rotateY(180deg);
-    }
-    100%{
-        transform: rotateY(720deg);
-    }
+	0% {
+		transform: rotateY(180deg);
+	}
+	100% {
+		transform: rotateY(720deg);
+	}
 }
 @keyframes rotate_back_reverse {
-    0%{
-        transform: rotateY(720deg);
-    }
-    100%{
-        transform: rotateY(180deg);
-    }
+	0% {
+		transform: rotateY(720deg);
+	}
+	100% {
+		transform: rotateY(180deg);
+	}
 }
