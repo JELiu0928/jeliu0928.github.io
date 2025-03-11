@@ -1,3 +1,8 @@
+@use '../abstracts/index' as *;
+// @use '../abstracts/variables' as *;
+// @use '../abstracts/mixin' as *;
+@use '../abstracts/themes' as *;
+
 *,
 *::before,
 *::after {
@@ -26,6 +31,17 @@ body {
 	position: relative;
 	font-size: 1.6rem;
 	color: $text-color-default;
+	background: var(--bgColor);
+	// color: var(--textColor);
+	// text-shadow: var(--textShadow);
+	// css變數搭配scss
+	@include changeTheme;
+	// scss版
+	// @include changeTheme {
+	// 	background: getValue('bgColor');
+	// 	color: getValue('textColor');
+	// 	text-shadow: getValue('textShadow');
+	// }
 }
 *[lang='zh-TW'] {
 	font-family: 'LXGW WenKai TC', serif;

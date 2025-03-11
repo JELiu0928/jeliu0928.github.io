@@ -1,3 +1,4 @@
+@use '../abstracts/index' as *;
 .card {
 	// 距離觀察者的距離： 150rem 代表從觀察者（或視角）到 3D 變換所在平面的距離。
 	perspective: 150rem;
@@ -77,26 +78,39 @@
 		animation: rotate_back_reverse 1.2s $card-rotate-cubic-bezier forwards;
 	}
 	&__picture {
+		--card-background-1: url('/img/Accessories.png');
+		--card-background-2: url('/img/happypet.png');
+		--card-background-3: url('/img/snake_game.png');
+		--card-background-4: url('/img/vue3_accounting.png');
+		--card-background-5: url('/img/taiwan_travel.png');
+
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
 		height: 100%;
 		// background-blend-mode定義該元素的背景圖片，以及背景色如何混合。
 		background-blend-mode: screen;
+		@supports (background-image: url('/img/Accessories.webp')) {
+			--card-background-1: url('/img/Accessories.webp');
+			--card-background-2: url('/img/happypet.webp');
+			--card-background-3: url('/img/snake_game.webp');
+			--card-background-4: url('/img/vue3_accounting.webp');
+			--card-background-5: url('/img/taiwan_travel.webp');
+		}
 		&--1 {
-			background-image: linear-gradient(to right bottom, $color-card-1-light, $color-card-1-dark), url(../img/Accessories_home.png);
+			background-image: linear-gradient(to right bottom, $color-card-1-light, $color-card-1-dark), var(--card-background-1);
 		}
 		&--2 {
-			background-image: linear-gradient(to right bottom, $color-card-2-light, $color-card-2-dark), url(../img/happypet.png);
+			background-image: linear-gradient(to right bottom, $color-card-2-light, $color-card-2-dark), var(--card-background-2);
 		}
 		&--3 {
-			background-image: linear-gradient(to right bottom, $color-card-3-light, $color-card-3-dark), url(../img/snake_game.png);
+			background-image: linear-gradient(to right bottom, $color-card-3-light, $color-card-3-dark), var(--card-background-3);
 		}
 		&--4 {
-			background-image: linear-gradient(to right bottom, $color-card-4-light, $color-card-4-dark), url(../img/vue3_accounting.png);
+			background-image: linear-gradient(to right bottom, $color-card-4-light, $color-card-4-dark), var(--card-background-4);
 		}
 		&--5 {
-			background-image: linear-gradient(to right bottom, $color-card-5-light, $color-card-5-dark), url(../img/taiwan_travel.png);
+			background-image: linear-gradient(to right bottom, $color-card-5-light, $color-card-5-dark), var(--card-background-5);
 		}
 	}
 	&__heading {
@@ -126,7 +140,7 @@
 		-webkit-box-decoration-break: clone;
 		box-decoration-break: clone;
 		transform: skewX(25deg);
-		text-shadow: 1px 1px 4px #ffffff;
+		text-shadow: 1px 1px 4px $color-grey-light-1;
 		&--subtitle {
 			padding: 0.7rem 1.3rem;
 			font-size: 1.4rem;
@@ -161,7 +175,7 @@
 				text-align: center;
 				padding: 0.55rem;
 				&:not(:last-child) {
-					border-bottom: 1px solid $color-grey-light-2;
+					border-bottom: 1px solid $color-grey-light-1;
 				}
 			}
 		}

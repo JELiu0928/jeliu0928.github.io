@@ -1,0 +1,104 @@
+/**
+ * 此文件是針對主題的變量和混合器，實現主題切換
+ * 目前主題：
+ * dreamy: 夢幻漸變
+ * dark: 暗黑網格
+ */
+@use './index' as *;
+// 定義主題映射
+$theme: (
+	dreamy: (
+		bgColor: linear-gradient(to right bottom, $linear-gradient-bg),
+		textColor: $text-color-default,
+		textShadow: none,
+		titleShadow: (
+			1px 1px 5px #ffb5b5,
+			3px 3px 5px #d69090,
+		),
+		scrollBarColor: linear-gradient(to bottom, $linear-gradient-bg),
+		anchorHoverColor: linear-gradient(to right bottom, $linear-gradient-bg),
+		boxShadow: 0 0.2rem 1rem #e2b6b6,
+		toggleBtnBg: #ffb4bb,
+		toggleBtnInset: inset 0 0 5px #fe97b3,
+		navHover: #fac6c6,
+		loadingBar1: #ff9ba1,
+		loadingBar2: #ffcb96,
+		loadingBar3: #c7d5a7,
+		loadingText: $linear-gradient-bg,
+		navColor: $dark-gradient-color,
+	),
+	dark: (
+		bgColor: (
+			fixed linear-gradient(transparent, #070707 70%),
+			fixed repeating-linear-gradient(#212121, #212121 1px, transparent 1px, transparent 40px),
+			fixed repeating-linear-gradient(to right, #212121, #212121 1px, transparent 1px, transparent 40px),
+			#070707,
+		),
+		textColor: #eeeeee,
+		textShadow: (
+			#686868 1px 1px 1px,
+			#454444 2px 2px 2px,
+		),
+		titleShadow: (
+			#626262 1px 1px 5px,
+			#9e9e9e 3px 3px 5px,
+		),
+		scrollBarColor: linear-gradient(to bottom, $dark-gradient-color),
+		anchorHoverColor: linear-gradient(to right bottom, #ddd, #777),
+		boxShadow: 0 0.2rem 0.5rem #a7a7a7,
+		toggleBtnBg: #d8d8d8,
+		toggleBtnInset: inset 0 0 5px #000000,
+		navHover: #aaa,
+		loadingBar1: #3e3e3e,
+		loadingBar2: #797979,
+		loadingBar3: #898989,
+		loadingText: $dark-gradient-color,
+		navColor: #252525,
+	),
+);
+
+// 初始化全局變數
+$themeMap: ();
+
+@mixin changeTheme() {
+	// 這裡的key是theme的key(gradient / dark)，value是theme的value( bgColor )
+	@each $key, $value in $theme {
+		// 使用!global是因為要讓變數在全局都可以使用
+		// 將當前主題的配置設置為全局變量，使其在函數中(如getValue)可訪問
+		$themeMap: $value !global;
+
+		html[data-theme='#{$key}'] & {
+			@each $propName, $propVal in $value {
+				--#{$propName}: #{$propVal};
+			}
+		}
+	}
+}
+
+/**
+ * 主題切換混合器(純用scss實現版)
+ * 為不同的主題創建相應的CSS規則，並設置全局主題變量
+ */
+// @mixin changeTheme() {
+// 	// 這裡的key是theme的key(gradient / dark)，value是theme的value( bgColor )
+// 	@each $key, $value in $theme {
+// 		// 使用!global是因為要讓變數在全局都可以使用
+// 		// 將當前主題的配置設置為全局變量，使其在函數中(如getValue)可訪問
+// 		$themeMap: $value !global;
+
+// 		// 這裡的&代表body (因為在body裡面使用mixin)
+// 		// #{$key} 類似 模板字符串
+// 		html[data-theme='#{$key}'] & {
+// 			// @include mixin時，{}裡的內容就是mixin的content
+// 			@content;
+// 		}
+// 	}
+// }
+/**
+ * 從當前主題中獲取指定屬性值(純用scss實現版)
+ * @param $propName - 要獲取的屬性名稱
+ * @return 對應的屬性值
+ */
+// @function getValue($propName) {
+// 	@return map-get($themeMap, $propName);
+// }

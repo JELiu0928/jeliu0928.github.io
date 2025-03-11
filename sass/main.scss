@@ -1,7 +1,7 @@
-@import 'abstracts/variables.scss';
-@import 'base/mixin';
-@import 'base/base';
-@import 'components/home';
-@import 'components/side';
-@import 'components/card';
-@import 'components/skill';
+@use 'abstracts/index' as *;
+@use 'base/base' as *;
+@use 'components/home';
+@use 'components/side';
+@use 'components/card';
+@use 'components/skill';
+@use 'components/toggleBtn';

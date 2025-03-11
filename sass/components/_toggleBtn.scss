@@ -1,0 +1,45 @@
+.btn {
+	$btn-container-width: 5rem;
+	$btn-container-height: 2.2rem;
+	$btn-size: 1.8rem;
+	$btn-magin: 0.3rem;
+	&_toggle {
+		width: $btn-container-width;
+		height: $btn-container-height;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: $btn-container-height;
+			border-radius: 10rem;
+			background: var(--toggleBtnBg);
+			box-shadow: var(--toggleBtnInset);
+		}
+		& > [name='theme'] {
+			display: none;
+			&:checked + label {
+				translate: $btn-container-width - $btn-size - (2 * $btn-magin);
+				background: url('/img/mode/unicorn1.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+		& > label {
+			margin-inline: $btn-magin;
+			cursor: pointer;
+			display: block;
+			width: $btn-size;
+			height: $btn-size;
+			border-radius: 50%;
+			transition: translate 500ms;
+			background: url('/img/mode/dark.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}

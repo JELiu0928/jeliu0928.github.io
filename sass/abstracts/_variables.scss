@@ -1,38 +1,28 @@
-// COLOR
-// $color-primary-light:#4b73d8;
-// $color-primary-dark:#2c2c86;
-// $color-primary-light:#dbbb9a;
-$color-primary-light: #f3ecda;
-$color-primary-dark: #b79570;
-// $color-primary-dark:#b18d66;
-$color-primary-dark-1: #c4ac95;
+@use 'sass:color'; // COLOR
+$color-primary-light: #e7e7e7;
 
-$color-card-1-light: #a2b6f6;
-$color-card-1-dark: #243056;
+$color-card-1-dark: #203372;
+// $color-card-1-light: lighten($color-card-1-dark, 40%);
+$color-card-1-light: color.adjust($color-card-1-dark, $lightness: 40%);
 
-$color-card-2-light: #bbdfd3;
-$color-card-2-dark: #66a28e;
+$color-card-2-dark: #477a69;
+$color-card-2-light: color.adjust($color-card-2-dark, $lightness: 40%);
 
-$color-card-3-light: #d4d4d4;
 $color-card-3-dark: #5e5757;
+$color-card-3-light: color.adjust($color-card-3-dark, $lightness: 40%);
+
+$color-card-4-dark: #1c4168;
+$color-card-4-light: color.adjust($color-card-4-dark, $lightness: 40%);
+
+$color-card-5-dark: #218941;
+$color-card-5-light: color.adjust($color-card-5-dark, $lightness: 40%);
 
 $text-color-default: #484848;
 $linear-gradient-bg: #fce67a, #fe97b3, #97d6fe;
-
-$color-card-4-light: #8acbf3;
-$color-card-4-dark: #385b86;
-
-$color-card-5-light: #69dc8b;
-$color-card-5-dark: #319d51;
-
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
+$color-grey-light-1: #eee;
 
 $color-white: #fff;
 $color-black: #000;
 
+$dark-gradient-color: #615e5e, #d6d3d3, #868686;
 $card-rotate-cubic-bezier: cubic-bezier(0.27, 0.74, 0.63, 0);

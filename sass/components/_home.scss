@@ -1,6 +1,4 @@
-body {
-	background-image: linear-gradient(to right bottom, $linear-gradient-bg);
-}
+@use '../abstracts/index' as *;
 .loading {
 	&-overlay {
 		position: fixed;
@@ -13,13 +11,24 @@ body {
 	}
 	&-text {
 		color: #b9b9b9;
-		background-image: linear-gradient(to right, $linear-gradient-bg);
+		background-image: linear-gradient(to right, var(--loadingText));
 		background-clip: text;
 		color: transparent;
 		background-size: 200% auto;
 		animation: colorChange 3s linear infinite;
 	}
 	&-bar {
+		&:nth-child(1) {
+			fill: var(--loadingBar1);
+		}
+		&:nth-child(2) {
+			fill: #797979;
+			fill: var(--loadingBar2);
+		}
+		&:nth-child(3) {
+			fill: #898989;
+			fill: var(--loadingBar3);
+		}
 		width: 12px;
 		height: 40px;
 		y: 30px;

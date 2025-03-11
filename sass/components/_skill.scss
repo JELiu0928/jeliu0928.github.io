@@ -1,3 +1,4 @@
+@use '../abstracts/index' as *;
 .skill {
 	.d-grid {
 		display: grid;
@@ -5,12 +6,18 @@
 		grid-template-columns: repeat(auto-fill, 10rem);
 		grid-template-rows: repeat(auto-fit, 10rem);
 		gap: 2rem;
-
-		& > li {
+	}
+	&__items {
+		& > .skill-item {
 			@include flexCenter;
 			flex-direction: column;
-			text-shadow: 1px 1px 5px #ffb5b5, 3px 3px 5px #d69090;
+			text-shadow: var(--titleShadow);
 			position: relative;
+			transition: transform 500ms;
+			$start: translateY(5rem);
+			transform: $start;
+			opacity: 0;
+
 			&:hover img {
 				animation: floatItem 1.5s linear infinite;
 			}
@@ -25,10 +32,30 @@
 				height: 0.8rem;
 				border-radius: 6rem / 3rem;
 			}
+			& img {
+				width: 8rem;
+				aspect-ratio: 1;
+				object-fit: contain;
+				display: block;
+			}
+			&.slideUp {
+				animation: slide_up 500ms linear forwards;
+			}
+			@keyframes slide_up {
+				from {
+					opacity: 0;
+					transform: $start;
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
 		}
 	}
 	&-container {
 		padding: 0 10rem;
+		margin-bottom: 10rem;
 		@media (max-width: 768px) {
 			padding: 0 6rem;
 		}
@@ -40,7 +67,7 @@
 	&__common {
 		cursor: default;
 		color: #fff;
-		text-shadow: 1px 1px 5px #ffb5b5, 3px 3px 5px #d69090;
+		text-shadow: var(--titleShadow);
 		margin-bottom: 1rem;
 		padding: 2rem;
 		border: 2px solid $color-grey-light-1;
@@ -48,7 +75,7 @@
 		transition: box-shadow 0.3s;
 
 		&:hover {
-			box-shadow: 2px 2px 6px #d69090;
+			box-shadow: var(--titleShadow);
 		}
 		&-title {
 			padding-bottom: 1.5rem;
@@ -57,10 +84,10 @@
 	}
 }
 
-img {
-	width: 8rem;
-	display: block;
-}
+// img {
+// 	width: 8rem;
+// 	display: block;
+// }
 @keyframes floatItem {
 	50% {
 		transform: translateY(-5px);
