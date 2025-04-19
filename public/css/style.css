@@ -492,7 +492,7 @@ html[data-theme=dark] body {
 .area-right > section > h2 {
   margin: 3rem auto;
   letter-spacing: 3px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: #fff;
   text-shadow: var(--titleShadow);
 }
@@ -542,7 +542,7 @@ html[data-theme=dark] body {
   }
 }
 .card__side {
-  height: 20rem;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -567,7 +567,7 @@ html[data-theme=dark] body {
   color: #203372;
 }
 .card__link--2 {
-  color: #477a69;
+  color: #376f5d;
 }
 .card__link--3 {
   color: #5e5757;
@@ -577,6 +577,9 @@ html[data-theme=dark] body {
 }
 .card__link--5 {
   color: #218941;
+}
+.card__link--6 {
+  color: #007891;
 }
 .card:hover .card__side--front {
   animation: rotate_front 1.2s cubic-bezier(0.27, 0.74, 0.63, 0) forwards;
@@ -596,6 +599,7 @@ html[data-theme=dark] body {
   --card-background-3: url("/img/snake_game.png");
   --card-background-4: url("/img/vue3_accounting.png");
   --card-background-5: url("/img/taiwan_travel.png");
+  --card-background-6: url("/img/pin_journey.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -609,13 +613,14 @@ html[data-theme=dark] body {
     --card-background-3: url("/img/snake_game.webp");
     --card-background-4: url("/img/vue3_accounting.webp");
     --card-background-5: url("/img/taiwan_travel.webp");
+    --card-background-6: url("/img/pin_journey.webp");
   }
 }
 .card__picture--1 {
   background-image: linear-gradient(to right bottom, rgb(130.0684931507, 150.8904109589, 219.9315068493), #203372), var(--card-background-1);
 }
 .card__picture--2 {
-  background-image: linear-gradient(to right bottom, rgb(183.5699481865, 213.4300518135, 203.4766839378), #477a69), var(--card-background-2);
+  background-image: linear-gradient(to right bottom, rgb(161.3855421687, 208.6144578313, 193.4337349398), #376f5d), var(--card-background-2);
 }
 .card__picture--3 {
   background-image: linear-gradient(to right bottom, rgb(194.9171270718, 190.0828729282, 190.0828729282), #5e5757), var(--card-background-3);
@@ -625,6 +630,9 @@ html[data-theme=dark] body {
 }
 .card__picture--5 {
   background-image: linear-gradient(to right bottom, rgb(145.4, 228.6, 171), #218941), var(--card-background-5);
+}
+.card__picture--6 {
+  background-image: linear-gradient(to right bottom, rgb(94, 227.2413793103, 255), #007891), var(--card-background-6);
 }
 .card__heading {
   width: 80%;
@@ -664,7 +672,7 @@ html[data-theme=dark] body {
   background-image: linear-gradient(to right bottom, rgba(130.0684931507, 150.8904109589, 219.9315068493, 0.85), rgba(32, 51, 114, 0.85));
 }
 .card__heading-span--2 {
-  background-image: linear-gradient(to right bottom, rgba(183.5699481865, 213.4300518135, 203.4766839378, 0.85), rgba(71, 122, 105, 0.85));
+  background-image: linear-gradient(to right bottom, rgba(161.3855421687, 208.6144578313, 193.4337349398, 0.85), rgba(55, 111, 93, 0.85));
 }
 .card__heading-span--3 {
   background-image: linear-gradient(to right bottom, rgba(194.9171270718, 190.0828729282, 190.0828729282, 0.85), rgba(94, 87, 87, 0.85));
@@ -674,6 +682,9 @@ html[data-theme=dark] body {
 }
 .card__heading-span--5 {
   background-image: linear-gradient(to right bottom, rgba(145.4, 228.6, 171, 0.85), rgba(33, 137, 65, 0.85));
+}
+.card__heading-span--6 {
+  background-image: linear-gradient(to right bottom, rgba(94, 227.2413793103, 255, 0.85), rgba(0, 120, 145, 0.85));
 }
 .card__details {
   padding: 1.2rem;

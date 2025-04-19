@@ -21,7 +21,8 @@
 		}
 	}
 	&__side {
-		height: 20rem;
+		// height: 20rem;
+		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -55,6 +56,9 @@
 		&--5 {
 			color: $color-card-5-dark;
 		}
+		&--6 {
+			color: $color-card-6-dark;
+		}
 	}
 
 	// @media (hover: hover) {
@@ -83,6 +87,7 @@
 		--card-background-3: url('/img/snake_game.png');
 		--card-background-4: url('/img/vue3_accounting.png');
 		--card-background-5: url('/img/taiwan_travel.png');
+		--card-background-6: url('/img/pin_journey.png');
 
 		background-size: cover;
 		background-position: center;
@@ -96,6 +101,7 @@
 			--card-background-3: url('/img/snake_game.webp');
 			--card-background-4: url('/img/vue3_accounting.webp');
 			--card-background-5: url('/img/taiwan_travel.webp');
+			--card-background-6: url('/img/pin_journey.webp');
 		}
 		&--1 {
 			background-image: linear-gradient(to right bottom, $color-card-1-light, $color-card-1-dark), var(--card-background-1);
@@ -111,6 +117,9 @@
 		}
 		&--5 {
 			background-image: linear-gradient(to right bottom, $color-card-5-light, $color-card-5-dark), var(--card-background-5);
+		}
+		&--6 {
+			background-image: linear-gradient(to right bottom, $color-card-6-light, $color-card-6-dark), var(--card-background-6);
 		}
 	}
 	&__heading {
@@ -162,6 +171,9 @@
 		}
 		&--5 {
 			background-image: linear-gradient(to right bottom, rgba($color-card-5-light, 0.85), rgba($color-card-5-dark, 0.85));
+		}
+		&--6 {
+			background-image: linear-gradient(to right bottom, rgba($color-card-6-light, 0.85), rgba($color-card-6-dark, 0.85));
 		}
 	}
 	&__details {

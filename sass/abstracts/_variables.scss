@@ -5,7 +5,7 @@ $color-card-1-dark: #203372;
 // $color-card-1-light: lighten($color-card-1-dark, 40%);
 $color-card-1-light: color.adjust($color-card-1-dark, $lightness: 40%);
 
-$color-card-2-dark: #477a69;
+$color-card-2-dark: #376f5d;
 $color-card-2-light: color.adjust($color-card-2-dark, $lightness: 40%);
 
 $color-card-3-dark: #5e5757;
@@ -16,6 +16,9 @@ $color-card-4-light: color.adjust($color-card-4-dark, $lightness: 40%);
 
 $color-card-5-dark: #218941;
 $color-card-5-light: color.adjust($color-card-5-dark, $lightness: 40%);
+
+$color-card-6-dark: #007891;
+$color-card-6-light: color.adjust($color-card-6-dark, $lightness: 40%);
 
 $text-color-default: #484848;
 $linear-gradient-bg: #fce67a, #fe97b3, #97d6fe;
