@@ -2,6 +2,9 @@
 // @use '../abstracts/variables' as *;
 // @use '../abstracts/mixin' as *;
 @use '../abstracts/themes' as *;
+// font-family: 'Monomakh', serif;
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap');
 
 *,
 *::before,
@@ -32,8 +35,6 @@ body {
 	font-size: 1.6rem;
 	color: $text-color-default;
 	background: var(--bgColor);
-	// color: var(--textColor);
-	// text-shadow: var(--textShadow);
 	// css變數搭配scss
 	@include changeTheme;
 	// scss版
@@ -42,6 +43,39 @@ body {
 	// 	color: getValue('textColor');
 	// 	text-shadow: getValue('textShadow');
 	// }
+
+	.cursor {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		background-image: linear-gradient(to right bottom, rgba(252, 230, 122, 0.6), rgba(254, 151, 178, 0.6), rgba(151, 214, 254, 0.6));
+		background: var(--marqueeBg);
+		color: #444;
+		position: fixed;
+		opacity: 0;
+		z-index: 999;
+		pointer-events: none;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+
+		&_text {
+			font-size: 2rem;
+			font-weight: bold;
+			white-space: pre;
+			text-wrap: nowrap;
+			animation: scrollText 15s linear infinite;
+			text-transform: uppercase;
+		}
+	}
+}
+@keyframes scrollText {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
 }
 *[lang='zh-TW'] {
 	font-family: 'LXGW WenKai TC', serif;

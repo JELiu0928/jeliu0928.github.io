@@ -26,6 +26,7 @@ $theme: (
 		loadingBar3: #c7d5a7,
 		loadingText: $linear-gradient-bg,
 		navColor: $dark-gradient-color,
+		marqueeBg: linear-gradient(to right bottom, rgba(252, 230, 122, 0.6), rgba(254, 151, 178, 0.6), rgba(151, 214, 254, 0.6)),
 	),
 	dark: (
 		bgColor: (
@@ -54,6 +55,7 @@ $theme: (
 		loadingBar3: #898989,
 		loadingText: $dark-gradient-color,
 		navColor: #252525,
+		marqueeBg: rgba(188, 188, 188, 0.6),
 	),
 );
 

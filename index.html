@@ -23,6 +23,9 @@
 		</script>
 	</head>
 	<body>
+		<div class="cursor">
+			<div class="cursor_text"></div>
+		</div>
 		<div class="loading-overlay">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="242" height="242">
 				<g>
@@ -190,50 +193,50 @@
 							<div class="skill__common skill__front">
 								<p class="skill__common-title">FRONT-END</p>
 								<ul class="d-grid skill__items">
-									<li class="skill-item">
-										HTML
+									<li class="skill-item" data-text="HTML">
+										<!-- HTML -->
 										<picture data-type="">
 											<source srcset="./img/icon/html.webp" type="image/webp" />
 											<img data-src="./img/icon/html.png" alt="HTML icon" loading="lazy" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										CSS
-										<picture data-type="default">
+									<li class="skill-item" data-text="CSS">
+										<!-- CSS -->
+										<picture>
 											<source srcset="./img/icon/css.webp" type="image/webp" />
 											<img data-src="./img/icon/css.png" alt="css icon" loading="lazy" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										JavaScript
+									<li class="skill-item" data-text="JavaScript">
+										<!-- JavaScript -->
 										<picture>
 											<source srcset="./img/icon/js.webp" type="image/webp" />
 											<img src="./img/icon/js.png" alt="js icon" loading="lazy" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										jQuery
+									<li class="skill-item" data-text="jQuery">
+										<!-- jQuery -->
 										<picture>
 											<source srcset="./img/icon/jq.webp" type="image/webp" />
 											<img src="./img/icon/jq.png" alt="jQuery icon" loading="lazy" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										Bootstrap5
+									<li class="skill-item" data-text="Bootstrap5">
+										<!-- Bootstrap5 -->
 										<picture>
 											<source srcset="./img/icon/bootstrap.webp" type="image/webp" />
 											<img src="./img/icon/bootstrap.png" alt="bootstrap icon" loading="lazy" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										React
+									<li class="skill-item" data-text="React">
+										<!-- React -->
 										<picture>
 											<source srcset="./img/icon/react.webp" type="image/webp" />
 											<img src="./img/icon/react.png" alt="react icon" loading="lazy" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										VUE3
+									<li class="skill-item" data-text="VUE3">
+										<!-- VUE3 -->
 										<picture>
 											<source srcset="./img/icon/vue.webp" type="image/webp" />
 											<img src="./img/icon/vue.png" alt="vue icon" loading="lazy" />
@@ -244,22 +247,22 @@
 							<div class="skill__common skill__back">
 								<p class="skill__common-title">BACK-END</p>
 								<ul class="d-grid skill__items">
-									<li class="skill-item">
-										PHP
+									<li class="skill-item" data-text="PHP">
+										<!-- PHP -->
 										<picture>
 											<source srcset="./img/icon/php.webp" type="image/webp" />
 											<img src="./img/icon/php.png" alt="php icon" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										Laravel
+									<li class="skill-item" data-text="Laravel">
+										<!-- Laravel -->
 										<picture>
 											<source srcset="./img/icon/laravel.webp" type="image/webp" />
 											<img src="./img/icon/laravel.png" alt="laravel icon" />
 										</picture>
 									</li>
-									<li class="skill-item">
-										MySQL
+									<li class="skill-item" data-text="MySQL">
+										<!-- MySQL -->
 										<picture>
 											<source srcset="./img/icon/mysql.webp" type="image/webp" />
 											<img src="./img/icon/mysql.png" alt="mysql icon" />
@@ -270,8 +273,8 @@
 							<div class="skill__common skill__back">
 								<p class="skill__common-title">OTHERS</p>
 								<ul class="d-grid skill__items">
-									<li class="skill-item">
-										Git
+									<li class="skill-item" data-text="Git">
+										<!-- Git -->
 										<picture>
 											<source srcset="./img/icon/git.webp" type="image/webp" />
 											<img src="./img/icon/git.png" alt="git icon" />
@@ -289,5 +292,8 @@
 			<animate id="circleAnimate" href="#myCircle" begin="indefinite" attributeName="stroke-dashoffset" from="400" to="0" dur=".8s" repeatCount="1" />
 		</svg>
 		<script src="./public/js/index.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+		<script defer src="./public/js/animation.js"></script>
 	</body>
 </html>

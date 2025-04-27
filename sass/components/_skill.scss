@@ -4,26 +4,23 @@
 		display: grid;
 		justify-content: center;
 		grid-template-columns: repeat(auto-fill, 10rem);
-		grid-template-rows: repeat(auto-fit, 10rem);
+		// grid-template-rows: repeat(auto-fit, 10rem);
+		grid-auto-rows: 10rem;
 		gap: 2rem;
 	}
+
 	&__items {
 		& > .skill-item {
 			@include flexCenter;
 			flex-direction: column;
 			text-shadow: var(--titleShadow);
 			position: relative;
-			transition: transform 500ms;
-			$start: translateY(5rem);
-			transform: $start;
-			opacity: 0;
+			// transition: transform 500ms;
+			// $start: translateY(5rem);
+			// transform: $start;
+			// opacity: 0;
+			// background-color: red;
 
-			&:hover img {
-				animation: floatItem 1.5s linear infinite;
-			}
-			&:hover::after {
-				animation: floatShadow 1.5s linear infinite;
-			}
 			&::after {
 				content: '';
 				position: absolute;
@@ -32,25 +29,32 @@
 				height: 0.8rem;
 				border-radius: 6rem / 3rem;
 			}
+			&:hover::after {
+				animation: floatShadow 1.5s linear infinite;
+			}
 			& img {
 				width: 8rem;
 				aspect-ratio: 1;
 				object-fit: contain;
 				display: block;
 			}
-			&.slideUp {
-				animation: slide_up 500ms linear forwards;
+			&:hover img {
+				// border: 5px solid blue;
+				animation: floatItem 1.5s linear infinite;
 			}
-			@keyframes slide_up {
-				from {
-					opacity: 0;
-					transform: $start;
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0);
-				}
-			}
+			// &.slideUp {
+			// 	animation: slide_up 500ms linear forwards;
+			// }
+			// @keyframes slide_up {
+			// 	from {
+			// 		opacity: 0;
+			// 		transform: $start;
+			// 	}
+			// 	to {
+			// 		opacity: 1;
+			// 		transform: translateY(0);
+			// 	}
+			// }
 		}
 	}
 	&-container {
@@ -83,10 +87,8 @@
 		}
 	}
 }
-
-// img {
-// 	width: 8rem;
-// 	display: block;
+// #skills {
+// 	position: relative;
 // }
 @keyframes floatItem {
 	50% {
