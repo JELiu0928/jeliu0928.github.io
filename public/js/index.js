@@ -10,14 +10,14 @@ window.addEventListener('load', function () {
 	const loadingEvent = new Event('loadingComplete');
 	window.dispatchEvent(loadingEvent);
 });
-document.querySelectorAll('.card').forEach((card) => {
-	card.addEventListener('mouseleave', function () {
-		card.classList.add('card-reverse');
-	});
-	card.addEventListener('mouseover', function () {
-		card.classList.remove('card-reverse');
-	});
-});
+// document.querySelectorAll('.card').forEach((card) => {
+// 	card.addEventListener('mouseleave', function () {
+// 		card.classList.add('card-reverse');
+// 	});
+// 	card.addEventListener('mouseover', function () {
+// 		card.classList.remove('card-reverse');
+// 	});
+// });
 
 // 網頁主題設定
 function checkTheme(event) {

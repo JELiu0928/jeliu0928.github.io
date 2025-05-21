@@ -59,7 +59,7 @@
 	}
 	&-container {
 		padding: 0 10rem;
-		margin-bottom: 10rem;
+		// margin-bottom: 10rem;
 		@media (max-width: 768px) {
 			padding: 0 6rem;
 		}
@@ -72,24 +72,24 @@
 		cursor: default;
 		color: #fff;
 		text-shadow: var(--titleShadow);
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 		padding: 2rem;
-		border: 2px solid $color-grey-light-1;
+		// border: 2px solid $color-grey-light-1;
 		border-radius: 2rem;
 		transition: box-shadow 0.3s;
-
-		&:hover {
-			box-shadow: var(--titleShadow);
+		&:is(:last-child) {
+			margin-bottom: 0;
 		}
+		// &:hover {
+		// 	box-shadow: var(--titleShadow);
+		// }
 		&-title {
 			padding-bottom: 1.5rem;
 			font-size: 20px;
 		}
 	}
 }
-// #skills {
-// 	position: relative;
-// }
+
 @keyframes floatItem {
 	50% {
 		transform: translateY(-5px);

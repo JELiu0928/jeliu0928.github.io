@@ -25,12 +25,14 @@ html {
 	// font-size: 10px;
 	// 用10px會好計算，但通常不會直接寫10px，而是用瀏覽器預設字體大小的16px*62.5% = 10px
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 body {
 	font-family: 'Monomakh', serif;
+
 	box-sizing: border-box; //在*使用繼承
-	height: 100vh;
-	overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
 	position: relative;
 	font-size: 1.6rem;
 	color: $text-color-default;
@@ -43,7 +45,23 @@ body {
 	// 	color: getValue('textColor');
 	// 	text-shadow: getValue('textShadow');
 	// }
+	// 設置firefox滾動條
+	@-moz-document url-prefix() {
+		scrollbar-color: #cab7cf transparent;
+	}
+	// 設置chrome滾動條
+	&::-webkit-scrollbar {
+		width: 5px;
+		background: $color-grey-light-1;
+	}
 
+	&::-webkit-scrollbar-thumb {
+		background-image: var(--scrollBarColor);
+	}
+	#project,
+	#skills {
+		scroll-margin-top: 25px;
+	}
 	.cursor {
 		width: 2rem;
 		height: 2rem;
@@ -67,6 +85,11 @@ body {
 			animation: scrollText 15s linear infinite;
 			text-transform: uppercase;
 		}
+	}
+	.btn_toggle {
+		position: fixed;
+		right: 1rem;
+		top: 1rem;
 	}
 }
 @keyframes scrollText {

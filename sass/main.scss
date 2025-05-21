@@ -1,7 +1,9 @@
 @use 'abstracts/index' as *;
 @use 'base/base' as *;
 @use 'components/home';
-@use 'components/side';
+@use 'components/header';
+@use 'components/section';
+@use 'components/word';
 @use 'components/card';
 @use 'components/skill';
 @use 'components/toggleBtn';
