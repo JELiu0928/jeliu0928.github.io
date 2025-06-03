@@ -4,22 +4,17 @@
 		display: grid;
 		justify-content: center;
 		grid-template-columns: repeat(auto-fill, 10rem);
-		// grid-template-rows: repeat(auto-fit, 10rem);
 		grid-auto-rows: 10rem;
 		gap: 2rem;
 	}
 
 	&__items {
 		& > .skill-item {
+			will-change: transform, opacity;
 			@include flexCenter;
 			flex-direction: column;
 			text-shadow: var(--titleShadow);
 			position: relative;
-			// transition: transform 500ms;
-			// $start: translateY(5rem);
-			// transform: $start;
-			// opacity: 0;
-			// background-color: red;
 
 			&::after {
 				content: '';
@@ -39,22 +34,8 @@
 				display: block;
 			}
 			&:hover img {
-				// border: 5px solid blue;
 				animation: floatItem 1.5s linear infinite;
 			}
-			// &.slideUp {
-			// 	animation: slide_up 500ms linear forwards;
-			// }
-			// @keyframes slide_up {
-			// 	from {
-			// 		opacity: 0;
-			// 		transform: $start;
-			// 	}
-			// 	to {
-			// 		opacity: 1;
-			// 		transform: translateY(0);
-			// 	}
-			// }
 		}
 	}
 	&-container {
@@ -63,7 +44,7 @@
 		@media (max-width: 768px) {
 			padding: 0 6rem;
 		}
-		@media (max-width: 560px) {
+		@media (max-width: 500px) {
 			padding: 0 3rem;
 		}
 	}

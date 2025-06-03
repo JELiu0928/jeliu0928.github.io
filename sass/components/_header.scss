@@ -1,25 +1,24 @@
 @use '../abstracts/index' as *;
-header {
-	// margin: auto;
-	border: 2px solid var(--textColor);
-	border-radius: 50px;
-	width: 30rem;
-	position: fixed;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 1rem;
-	.nav {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 2rem;
-		padding: 1rem;
+// header {
+// 	// margin: auto;
+// 	border: 2px solid var(--textColor);
+// 	border-radius: 50px;
+// 	width: 30rem;
+// 	position: fixed;
+// 	left: 50%;
+// 	transform: translateX(-50%);
+// 	top: 1rem;
+// 	.nav {
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		gap: 2rem;
+// 		padding: 1rem;
 
-		a {
-			color: var(--textColor);
-			display: inline-flex;
-			align-items: center;
-			// vertical-align: middle;
-		}
-	}
-}
+// 		a {
+// 			color: var(--textColor);
+// 			display: inline-flex;
+// 			align-items: center;
+// 		}
+// 	}
+// }

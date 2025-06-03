@@ -1,9 +1,5 @@
 @use '../abstracts/index' as *;
-// @use '../abstracts/variables' as *;
-// @use '../abstracts/mixin' as *;
 @use '../abstracts/themes' as *;
-// font-family: 'Monomakh', serif;
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap');
 
 *,
@@ -20,14 +16,19 @@ a {
 	text-decoration: none;
 	color: $text-color-default;
 }
-
+html,
+body {
+	height: 100%;
+}
 html {
 	// font-size: 10px;
 	// 用10px會好計算，但通常不會直接寫10px，而是用瀏覽器預設字體大小的16px*62.5% = 10px
 	font-size: 62.5%;
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
 }
 body {
+	min-width: 320px;
+	padding-bottom: 1px;
 	font-family: 'Monomakh', serif;
 
 	box-sizing: border-box; //在*使用繼承
@@ -37,6 +38,9 @@ body {
 	font-size: 1.6rem;
 	color: $text-color-default;
 	background: var(--bgColor);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	// background-size: cover;
 	// css變數搭配scss
 	@include changeTheme;
 	// scss版
@@ -58,10 +62,6 @@ body {
 	&::-webkit-scrollbar-thumb {
 		background-image: var(--scrollBarColor);
 	}
-	#project,
-	#skills {
-		scroll-margin-top: 25px;
-	}
 	.cursor {
 		width: 2rem;
 		height: 2rem;
@@ -76,7 +76,7 @@ body {
 		display: flex;
 		align-items: center;
 		overflow: hidden;
-
+		will-change: transform, width, height, border-radius, opacity;
 		&_text {
 			font-size: 2rem;
 			font-weight: bold;
@@ -90,6 +90,7 @@ body {
 		position: fixed;
 		right: 1rem;
 		top: 1rem;
+		z-index: 99;
 	}
 }
 @keyframes scrollText {

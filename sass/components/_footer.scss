@@ -1,0 +1,24 @@
+@use '../abstracts/index' as *;
+@use 'sass:color';
+footer {
+	margin-top: 10rem;
+	padding-bottom: 5rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	color: $text-color-default;
+
+	a {
+		transition: color 0.3s;
+		color: $text-color-default;
+		&:hover {
+			color: color.adjust($text-color-default, $lightness: 20%);
+		}
+	}
+	@media screen and (max-width: 500px) {
+		padding-bottom: 8rem;
+	}
+}
